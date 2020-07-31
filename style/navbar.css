@@ -1,0 +1,33 @@
+#navBar {
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    z-index: 3;
+    background-color: var(--accentColor);
+    
+}
+  
+#navBar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    background-color: var(--accentColor);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#navBar a:hover {
+    background-color: var(--flatRed);
+    padding: 10px 16px;
+}

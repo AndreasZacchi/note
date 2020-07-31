@@ -1,0 +1,5 @@
+Default dark: #272932
+Accent dark: #1e2e35
+Flat red: #FE5F55
+Flat green: #82D173
+Light Blue: #2E86AB

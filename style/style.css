@@ -1,0 +1,278 @@
+:root {
+    --mainColor: #272932;
+    --accentColor: #1e2e35;
+    --flatRed: #FE5F55;
+    --flatGreen: #82D173;
+    --lightBlue: #2E86AB;
+    --flatBlue: #558C8C;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: source sans pro;
+    background-color: var(--mainColor);
+    color: #ffffff;
+}
+/*Typewriter*/
+#typeWrittenHeader, #aboutUsTitle, #homeTitle, #functionsTitle, #contactTitle, #newsletterTitle {
+    text-align: center;
+    z-index: 1;
+}
+#titleContainer {
+    margin: 23.6% 0;
+    width: 100%;
+    text-align: center;
+}
+#typeWrittenHeader, .titleStyle {
+    position: relative;
+    margin: -100px auto 0px;
+}
+#typeWrittenHeader .Typewriter__wrapper, #typeWrittenHeader .Typewriter__cursor, #blogTitle .Typewriter__cursor, #blogTitle .Typewriter__wrapper {
+    font-size: 120px;
+}
+#aboutUsTitle .Typewriter__wrapper, #aboutUsTitle .Typewriter__cursor, #homeTitle .Typewriter__wrapper, #homeTitle .Typewriter__cursor, #functionsTitle .Typewriter__wrapper, #functionsTitle .Typewriter__cursor, #contactTitle .Typewriter__wrapper, #contactTitle .Typewriter__cursor, #newsletterTitle .Typewriter__wrapper, #newsletterTitle .Typewriter__cursor {
+    font-size: 100px;
+}
+/*Typewriter-END*/
+/*LoginStuff*/
+.errormessage {
+    color: var(--flatRed);
+}
+.successmessage {
+    color: var(--flatGreen);
+}
+.loginDiv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.loginDiv, .signupDiv, .resetPasswordDiv, .createPasswordDiv {
+    text-align: center;
+    font-family: source sans pro;
+    color: white;
+}
+
+.input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: var(--mainColor);
+    width: 50%;
+    margin: 0 auto 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--lightBlue);
+}
+.btn {
+    border: 2px solid white;
+    background-color: var(--mainColor);
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+  
+.default {
+    color: white;
+}
+
+.default:hover {
+    background: var(--lightBlue);
+}
+
+.loginlink {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 2px auto 0;
+    width: 18%;
+}
+/*LoginStuff-END*/
+/*BLOG*/
+.blogDiv {
+    width: 75%;
+    margin: 100px auto;
+    padding: 0;
+    text-align: center;
+}
+.blogSubject {
+    font-size: 70px;
+    font-weight: normal;
+    margin: 0;
+}
+.blogText {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.blogDate {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0;
+    font-style: italic;
+}
+.writtenBy {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: capitalize;
+}
+/*BLOG-END*/
+/* NoteFolderBar */
+a {
+    text-decoration: none;
+    color: white;
+}
+.documentDetails {
+    visibility: hidden;
+    height: 4vh;
+    display: flex;
+    opacity: 0;
+    transition: 0.5s;
+    position: relative;
+    top: -10px;
+    font-size: 100%;
+}
+.documentDetails:hover {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+.documentTitle:hover + .documentDetails {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+.editDocument {
+    width: 50%;
+    text-align: center;
+    opacity: 0.7;
+    transition: 0.2s;
+    cursor: pointer;
+}
+/* Folder/File Div */
+.documentBox {
+    height: auto;
+    padding: 1vh 0;
+}
+.documentTitle {
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.editDocument:hover {
+    opacity: 1;
+}
+.documentDetails:hover + .documentTitle {
+    opacity: 1;
+}
+.createDate {
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 15fr 1fr;
+    grid-template-rows: 100vh;
+}
+.folderBar {
+    font-size: 1.5vw;
+    background: var(--accentColor);
+    overflow: auto;
+}
+#currentPath {
+    visibility: hidden;
+    position: absolute;
+}
+.note {
+    border: 3px solid red;
+}
+.logoutNoteButton {
+    background: transparent;
+    border: none !important;
+}
+.noteNavbar {
+    background: var(--accentColor);
+}
+.noteNavbarContent {
+    padding: 6vh 0;
+    text-align: center;
+}
+#buttonNote {
+    color: white;
+    cursor: pointer;
+    font-size: 2vw;
+    transition: 0.2s;
+}
+.fa-sign-out-alt:hover {
+    color: var(--flatRed) !important;
+    transform: scale(1.4, 1.4)
+}
+.buttonNote {
+    color: white;
+    cursor: pointer;
+    font-size: 2vw;
+    transition: 0.2s;
+    float: none !important;
+}
+.buttonNote:hover {
+    color: var(--lightBlue);
+    transform: scale(1.2, 1.2);
+}
+#noteContent {
+    min-height: 99vh;
+    max-height: 99vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* Icons */
+.fa-trash-alt, .fa-pencil-alt {
+    transition: 0.2s;
+}
+.fa-pencil-alt:hover {
+    color: var(--flatGreen);
+}
+a .far:hover {
+    color: var(--flatRed);
+}
+.fa-arrow-left {
+    color: white !important;
+}
+.fa-folder, .fa-sticky-note, .fa-arrow-left {
+    float: left !important;
+    margin-right: 5px;
+}
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /* background: var(--accentColor); */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--flatBlue);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #467272;
+  }
