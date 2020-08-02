@@ -207,9 +207,12 @@ a {
 }
 .noteNavbar {
     background: var(--accentColor);
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    justify-content: space-evenly;
 }
 .noteNavbarContent {
-    padding: 6vh 0;
     text-align: center;
 }
 #buttonNote {
@@ -260,11 +263,6 @@ a .far:hover {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    /* background: var(--accentColor); */
   }
   
   /* Handle */
