@@ -14,10 +14,8 @@
 </script>
 <div class="grid-container">
     <div class="folderBar">
-            <div class="navHeader">
-                Søgefunktion.. Kommer forhåbentligt snart :)
-            </div>
-            <div id="foldersandfiles"></div>
+        <div class="navHeader"></div>
+        <div id="foldersandfiles"></div>
     </div>
     <div id="noteContainer" class="note">
         <div id="noteContent" contenteditable="true"></div>

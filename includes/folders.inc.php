@@ -126,10 +126,11 @@ function listFromTree() {
         foreach($tree as $t) {
             $path = base64_encode($t["path"].$t["id"]."/");
             echo '
-            <div class="documentBox">
-                <a class="documentTitle" href="#" onclick="getAll(\''.$path.'\');"><i class="fa fa-folder" aria-hidden="true"></i>'.$t["name"].'</a>
+            <div tabindex="0" class="documentBox">
+                <div class="documentTitle"><i class="fa fa-folder" aria-hidden="true"></i>'.$t["name"].'</div>
                 <div class="documentDetails">
-                    <div style="background: var(--lightBlue);" class="editDocument" onclick="renameFolder('.$t["id"].', \''.$t["name"].'\', \''.base64_encode($t["path"]).'\');">Edit</div>
+                    <div style="background: var(--lightBlue);" class="editDocument openDiv" onclick="getAll(\''.$path.'\');">Open</div>
+                    <div style="background: var(--flatGreen);" class="editDocument" onclick="renameFolder('.$t["id"].', \''.$t["name"].'\', \''.base64_encode($t["path"]).'\');">Edit</div>
                     <div style="background: var(--flatRed);" class="editDocument" onclick="deleteFolder('.$t["id"].');">Delete</div>
                 </div>
             </div>';      
@@ -140,10 +141,11 @@ function listFromTree() {
             $path = $_SESSION['path64'];
             foreach($notesTree as $t) {
             echo '
-            <div class="documentBox">
-                <a class="documentTitle" href="#" onclick="loadNote(\''.$t['id'].'\')"><i class="fa fa-sticky-note" aria-hidden="true"></i>'.$t["title"].'</a>
+            <div tabindex="0" class="documentBox">
+                <div class="documentTitle"><i class="fa fa-sticky-note" aria-hidden="true"></i>'.$t["title"].'</div>
                 <div class="documentDetails">
-                    <div style="background: var(--lightBlue);" class="editDocument"><a class="editDocument" title="Rename" href="#" onclick="renameNote('.$t["id"].', \''.$t["title"].'\', \''.$path.'\');">Edit</a></div>
+                <div style="background: var(--lightBlue);" class="editDocument openDiv" onclick="loadNote(\''.$t['id'].'\')">Open</div>
+                    <div style="background: var(--flatGreen);" class="editDocument"><a class="editDocument" title="Rename" href="#" onclick="renameNote('.$t["id"].', \''.$t["title"].'\', \''.$path.'\');">Edit</a></div>
                     <div style="background: var(--flatRed);" class="editDocument"><a class="editDocument" title="Delete" href="#" onclick="deleteNote('.$t["id"].', \''.$path.'\');">Delete</a></div>
                 </div>
             </div>';    

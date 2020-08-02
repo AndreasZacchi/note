@@ -139,47 +139,51 @@ a {
 }
 .documentDetails {
     visibility: hidden;
-    height: 4vh;
-    display: flex;
-    opacity: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
     transition: 0.5s;
     position: relative;
-    top: -10px;
-    font-size: 100%;
+    top: -15vh;
+    right: 100%;
+    font-size: 5vh;
+    z-index: 1;
 }
-.documentDetails:hover {
-    visibility: visible;
-    opacity: 1;
-    top: 0;
+:focus {
+    border: none;
 }
-.documentTitle:hover + .documentDetails {
+.documentDetails:focus {
     visibility: visible;
-    opacity: 1;
-    top: 0;
+    right: 0;
+}
+.documentBox:focus > .documentDetails {
+    visibility: visible;
+    right: 0;
+}
+.openDiv {
+    grid-column: 1 / 3;
 }
 .editDocument {
-    width: 50%;
+    width: 100%;
     text-align: center;
-    opacity: 0.7;
+    opacity: 1;
     transition: 0.2s;
     cursor: pointer;
 }
 /* Folder/File Div */
 .documentBox {
-    height: auto;
-    padding: 1vh 0;
+    height: 15vh;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .documentTitle {
     transition: 0.2s;
+    line-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.editDocument:hover {
-    opacity: 1;
-}
-.documentDetails:hover + .documentTitle {
-    opacity: 1;
 }
 .createDate {
     text-align: center;
