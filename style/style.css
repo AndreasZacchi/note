@@ -240,9 +240,6 @@ a {
 #noteContainer {
     background: var(--secondColor)
 }
-.note {
-    
-}
 .logoutNoteButton {
     background: transparent;
     border: none !important;
