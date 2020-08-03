@@ -70,7 +70,9 @@ else if($_POST['type'] == 4) {
         $path = base64_decode($_SESSION['path64']) == "/" ? "." : base64_decode($_SESSION['path64']).".";
         echo base64_decode($_SESSION['path64']);
         echo $path;
-        mysqli_stmt_bind_param($stmt, "iss", $_SESSION['userId'], $path, $_POST['title']);
+        $title = $_POST['title'];
+        preg_replace("/[^A-Za-z0-9 ,.\-_\/\(\)\!\?]/", '', $title);
+        mysqli_stmt_bind_param($stmt, "iss", $_SESSION['userId'], $path, $title);
         mysqli_stmt_execute($stmt);
     }
 }
@@ -84,8 +86,10 @@ else if($_POST['type'] == 5) {
         exit();
     }
     else {
+        $name = $_POST['name'];
+        preg_replace("/[^A-Za-z0-9 ,.\-_\/\(\)\!\?]/", '', $name);
         $path = base64_decode($_SESSION['path64']);
-        mysqli_stmt_bind_param($stmt, "iss", $_SESSION['userId'], $path, $_POST['name']);
+        mysqli_stmt_bind_param($stmt, "iss", $_SESSION['userId'], $path, $name);
         mysqli_stmt_execute($stmt);
     }
 }

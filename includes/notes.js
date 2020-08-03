@@ -24,35 +24,16 @@ function loadNote(noteID) {
                     "id": noteID, 
                 },
             success: function (data) {
+                document.getElementById("noteContent").innerHTML = data;
                 document.getElementById("noteContent").setAttribute("data-opennote", noteID);
-                formatNote(data);
             },
         })
     });
 }
 
-function formatNote(content) {
-    var res = content
-    .replace(/\[bold\]/g, "<b>")
-    .replace(/\[\/bold\]/g, "</b>")
-    .replace(/\[italic\]/g, "<i>")
-    .replace(/\[\/italic\]/g, "</i>");
-
-    document.getElementById("noteContent").innerHTML = res;
-}
-
-function deFormatNote(content) {
-    var res = content
-    .replace(/<b>/g, "[bold]")
-    .replace(/<\/b>/g, "[/bold]")
-    .replace(/<i>/g, "[italic]")
-    .replace(/<\/i>/g, "[/italic]");
-    return res;
-}
-
 let oldContent;
 function saveNote(noteID) {
-    let content = deFormatNote($("#noteContent").html());
+    let content = $("#noteContent").html();
     $(document).ready(function () {
         if(oldContent == undefined || oldContent != content) {
             jQuery.ajax({
@@ -68,4 +49,16 @@ function saveNote(noteID) {
             oldContent = content;
         }
     });
+}
+
+function add_tag(tag) {
+    if(tag == "b") {
+        document.execCommand('bold');
+    } else if(tag == "i") {
+        document.execCommand('italic');
+    } else if(tag == "u") {
+        document.execCommand('underline');
+    } else if(tag == "s") {
+        document.execCommand('strikeThrough');
+    }
 }

@@ -24,7 +24,7 @@ function loadNote($noteID) {
         mysqli_stmt_execute($stmt);
         $r = mysqli_stmt_get_result($stmt);
         if($row = mysqli_fetch_assoc($r)) {
-            echo $row['content'];
+            echo htmlspecialchars_decode($row['content'], ENT_NOQUOTES);
         }
     }
 }

@@ -1,13 +1,16 @@
 :root {
     --mainColor: #272932;
+    --secondColor: #1E1E20;
     --accentColor: #1e2e35;
-    --flatRed: #FE5F55;
+    /*--flatRed: #FE5F55;
     --flatGreen: #82D173;
-    --lightBlue: #2E86AB;
+    --lightBlue: #2E86AB;*/
+    --flatRed: #c47066;
+    --flatGreen: #c7c37f;
+    --lightBlue: #51966d;
     --flatBlue: #558C8C;
+    --spiceColor: #FF7F50;
 }
-
-
 
 
 body {
@@ -72,7 +75,7 @@ body {
 
 .input:focus{
     outline: none;
-    border-bottom: 2px solid var(--lightBlue);
+    border-bottom: 2px solid var(--spiceColor);
 }
 .btn {
     border: 2px solid white;
@@ -88,7 +91,7 @@ body {
 }
 
 .default:hover {
-    background: var(--lightBlue);
+    background: var(--spiceColor);
 }
 
 .loginlink {
@@ -146,8 +149,9 @@ a {
     grid-template-rows: 50% 50%;
     transition: 0.5s;
     position: absolute;
-    right: 100%;
+    right: 101%;
     top: 0;
+    opacity: 0;
     font-size: 5vh;
     z-index: 1;
 }
@@ -157,10 +161,12 @@ a {
 .documentDetails:focus {
     visibility: visible;
     right: 0;
+    opacity: 1;
 }
 .documentBox:focus > .documentDetails {
     visibility: visible;
     right: 0;
+    opacity: 1;
 }
 .openDiv {
     grid-column: 1 / 3;
@@ -177,7 +183,6 @@ a {
     height: 15vh;
     cursor: pointer;
     border: 1px solid black;
-    border-radius: 5px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -188,11 +193,27 @@ a {
 .documentTitle {
     font-size: 1.8vw;
     transition: 0.2s;
-    display: flex;
-    align-items: center;
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: center;
+}
+
+.fa-folder, .fa-sticky-note {
+    font-size: 1.5vw;
 }
 .documentDates {
     font-size: 1.5vw;
+    display: flex;
+    align-items: center;
 }
 .createDate {
     text-align: center;
@@ -203,7 +224,7 @@ a {
     grid-template-rows: 100vh;
 }
 .folderBar {
-    background: var(--accentColor);
+    background: var(--mainColor);
     overflow: auto;
     overflow-x: hidden;
 }
@@ -211,15 +232,25 @@ a {
     visibility: hidden;
     position: absolute;
 }
+/* Note formating */
+#noteTextFormat {
+    border: 1px solid black;
+    height: 150px;
+    width: 100%;
+}
+#noteContainer {
+    background: var(--secondColor)
+}
 .note {
-    border: 3px solid red;
+    
 }
 .logoutNoteButton {
     background: transparent;
     border: none !important;
 }
 .noteNavbar {
-    background: var(--accentColor);
+    background: var(--mainColor);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-items: stretch;
@@ -246,11 +277,10 @@ a {
     float: none !important;
 }
 .buttonNote:hover {
-    color: var(--lightBlue);
+    color: var(--spiceColor);
     transform: scale(1.2, 1.2);
 }
 #noteContent {
-    min-height: 99vh;
     max-height: 99vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -272,18 +302,25 @@ a .far:hover {
     float: left !important;
     margin-right: 5px;
 }
+/* Removes irritating outline */
+:focus {
+    outline: none;
+}
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
+::-webkit-scrollbar-track {
+    background: #FFD2C2;
+}
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--flatBlue);
+    background: var(--spiceColor);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #467272;
+    background: #FF5A1F;
   }

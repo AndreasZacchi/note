@@ -18,6 +18,12 @@
         <div id="foldersandfiles"></div>
     </div>
     <div id="noteContainer" class="note">
+        <div id="noteTextFormat">
+            <input type="button" value="B" style="font-weight:bold;" onclick='add_tag("b");'>
+            <input type="button" value="I" style="font-style:italic;" onclick='add_tag("i");'>
+            <input type="button" value="U" style="text-decoration:underline;" onclick='add_tag("u");'>
+            <input type="button" value="S" style="text-decoration:line-through;" onclick='add_tag("s");'>
+        </div>
         <div id="noteContent" contenteditable="false"></div>
     </div>
     <div class="noteNavbar">
