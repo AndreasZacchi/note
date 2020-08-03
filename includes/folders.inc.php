@@ -37,7 +37,7 @@ function getUsersNotes() {
     if($path == "/.%") {
         $path = ".%";
     }
-    $sql = "SELECT id, path, title, DATE_FORMAT(createDate, '%d %M %Y') FROM notes WHERE ownerUID=? AND path LIKE ?";
+    $sql = "SELECT id, path, title, DATE_FORMAT(createDate, '%d %M %Y') AS createDate FROM notes WHERE ownerUID=? AND path LIKE ?";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         exit();
@@ -128,7 +128,7 @@ function listFromTree() {
             echo '
             <div tabindex="0" class="documentBox">
                 <div class="documentTitle"><i class="fa fa-folder" aria-hidden="true"></i>'.$t["name"].'</div>
-                <div class="documentDetails">
+                    <div class="documentDetails">
                     <div style="background: var(--lightBlue);" class="editDocument openDiv" onclick="getAll(\''.$path.'\');">Open</div>
                     <div style="background: var(--flatGreen);" class="editDocument" onclick="renameFolder('.$t["id"].', \''.$t["name"].'\', \''.base64_encode($t["path"]).'\');">Edit</div>
                     <div style="background: var(--flatRed);" class="editDocument" onclick="deleteFolder('.$t["id"].');">Delete</div>
@@ -138,13 +138,14 @@ function listFromTree() {
         #endregion
 
         #region fetchNotes
-            $path = $_SESSION['path64'];
-            foreach($notesTree as $t) {
+        $path = $_SESSION['path64'];
+        foreach($notesTree as $t) {
             echo '
             <div tabindex="0" class="documentBox">
                 <div class="documentTitle"><i class="fa fa-sticky-note" aria-hidden="true"></i>'.$t["title"].'</div>
+                <div class="documentDates">'.$t["createDate"].'</div>
                 <div class="documentDetails">
-                <div style="background: var(--lightBlue);" class="editDocument openDiv" onclick="loadNote(\''.$t['id'].'\')">Open</div>
+                    <div style="background: var(--lightBlue);" class="editDocument openDiv" onclick="loadNote(\''.$t['id'].'\')">Open</div>
                     <div style="background: var(--flatGreen);" class="editDocument"><a class="editDocument" title="Rename" href="#" onclick="renameNote('.$t["id"].', \''.$t["title"].'\', \''.$path.'\');">Edit</a></div>
                     <div style="background: var(--flatRed);" class="editDocument"><a class="editDocument" title="Delete" href="#" onclick="deleteNote('.$t["id"].', \''.$path.'\');">Delete</a></div>
                 </div>

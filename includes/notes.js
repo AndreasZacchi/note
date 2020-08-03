@@ -4,7 +4,11 @@ $(document).ready(function () {
 
 function ifChecker() {
     if(document.getElementById("noteContent").getAttribute("data-opennote") != undefined) {
+        $("#noteContent").attr("contenteditable", true);
         saveNote(document.getElementById("noteContent").getAttribute("data-opennote"));
+    }
+    else {
+        $("#noteContent").attr("contenteditable", false);
     }
     setTimeout(ifChecker, 1000);
 }
@@ -20,24 +24,48 @@ function loadNote(noteID) {
                     "id": noteID, 
                 },
             success: function (data) {
-                document.getElementById("noteContent").innerHTML = data;
                 document.getElementById("noteContent").setAttribute("data-opennote", noteID);
+                formatNote(data);
             },
         })
     });
 }
-//TODO: Implement oldContent so it doesn't send requests
+
+function formatNote(content) {
+    var res = content
+    .replace(/\[bold\]/g, "<b>")
+    .replace(/\[\/bold\]/g, "</b>")
+    .replace(/\[italic\]/g, "<i>")
+    .replace(/\[\/italic\]/g, "</i>");
+
+    document.getElementById("noteContent").innerHTML = res;
+}
+
+function deFormatNote(content) {
+    var res = content
+    .replace(/<b>/g, "[bold]")
+    .replace(/<\/b>/g, "[/bold]")
+    .replace(/<i>/g, "[italic]")
+    .replace(/<\/i>/g, "[/italic]");
+    return res;
+}
+
+let oldContent;
 function saveNote(noteID) {
+    let content = deFormatNote($("#noteContent").html());
     $(document).ready(function () {
-        jQuery.ajax({
-            type: "POST",
-            url: "includes/notes.inc.php",
-            ContentType: "charset=utf-8",
-            data: {
-                    "type": 1,
-                    "id": noteID,
-                    "content": $("#noteContent").html(), 
-                },
-        })
+        if(oldContent == undefined || oldContent != content) {
+            jQuery.ajax({
+                type: "POST",
+                url: "includes/notes.inc.php",
+                ContentType: "charset=utf-8",
+                data: {
+                        "type": 1,
+                        "id": noteID,
+                        "content": content, 
+                    },
+            })
+            oldContent = content;
+        }
     });
 }

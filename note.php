@@ -18,7 +18,7 @@
         <div id="foldersandfiles"></div>
     </div>
     <div id="noteContainer" class="note">
-        <div id="noteContent" contenteditable="true"></div>
+        <div id="noteContent" contenteditable="false"></div>
     </div>
     <div class="noteNavbar">
         <div id="newContainer" class="noteNavbarContent"></div>

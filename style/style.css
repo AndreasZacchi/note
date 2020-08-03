@@ -140,13 +140,14 @@ a {
 .documentDetails {
     visibility: hidden;
     height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     transition: 0.5s;
-    position: relative;
-    top: -15vh;
+    position: absolute;
     right: 100%;
+    top: 0;
     font-size: 5vh;
     z-index: 1;
 }
@@ -177,13 +178,21 @@ a {
     cursor: pointer;
     border: 1px solid black;
     border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
 }
 .documentTitle {
+    font-size: 1.8vw;
     transition: 0.2s;
-    line-height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+.documentDates {
+    font-size: 1.5vw;
 }
 .createDate {
     text-align: center;
@@ -194,9 +203,9 @@ a {
     grid-template-rows: 100vh;
 }
 .folderBar {
-    font-size: 1.5vw;
     background: var(--accentColor);
     overflow: auto;
+    overflow-x: hidden;
 }
 #currentPath {
     visibility: hidden;
