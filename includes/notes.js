@@ -1,5 +1,30 @@
 $(document).ready(function () {
     ifChecker();
+
+    $('#tagB').click(function() {
+        document.execCommand('bold');
+    });
+    $('#tagI').click(function() {
+        document.execCommand('italic');
+    });
+    $('#tagU').click(function() {
+        document.execCommand('underline');
+    });
+    $('#tagS').click(function() {
+        document.execCommand('strikeThrough');
+    });
+    $('#tagJL').click(function() {
+        document.execCommand('justifyLeft');
+    });
+    $('#tagJC').click(function() {
+        document.execCommand('justifyCenter');
+    });
+    $('#tagJR').click(function() {
+        document.execCommand('justifyRight');
+    });
+    $('#tagJF').click(function() {
+        document.execCommand('justifyFull');
+    });
 });
 
 function ifChecker() {
@@ -49,16 +74,4 @@ function saveNote(noteID) {
             oldContent = content;
         }
     });
-}
-
-function add_tag(tag) {
-    if(tag == "b") {
-        document.execCommand('bold');
-    } else if(tag == "i") {
-        document.execCommand('italic');
-    } else if(tag == "u") {
-        document.execCommand('underline');
-    } else if(tag == "s") {
-        document.execCommand('strikeThrough');
-    }
 }

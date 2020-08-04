@@ -19,12 +19,18 @@
     </div>
     <div id="noteContainer" class="note">
         <div id="noteTextFormat">
-            <input type="button" value="B" style="font-weight:bold;" onclick='add_tag("b");'>
-            <input type="button" value="I" style="font-style:italic;" onclick='add_tag("i");'>
-            <input type="button" value="U" style="text-decoration:underline;" onclick='add_tag("u");'>
-            <input type="button" value="S" style="text-decoration:line-through;" onclick='add_tag("s");'>
+            <button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button>
+            <button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button>
+            <button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button>
+            <button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button>
+            <button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button>
+            <button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button>
+            <button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button>
+            <button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button>
+            <div class="formatDivider"></div>
         </div>
         <div id="noteContent" contenteditable="false"></div>
+        <div id="noteFooter"></div>
     </div>
     <div class="noteNavbar">
         <div id="newContainer" class="noteNavbarContent"></div>

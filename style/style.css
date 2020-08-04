@@ -236,12 +236,36 @@ a {
 /* Note formating */
 #noteTextFormat {
     border: 1px solid black;
-    height: 150px;
+    height: 10vh;
     width: 100%;
 }
 #noteContainer {
     background: var(--secondColor)
 }
+.formatBtn {
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+    background: white;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.formatDivider {
+    height: 30px;
+    width: 1px;
+    background: white;
+}
+/* notefooter */
+#noteFooter {
+    background: white;
+    height: 5vh;
+    width: 100%;
+    border: 1px solid black; 
+}
+/* Navbar */
 .logoutNoteButton {
     background: transparent;
     border: none !important;
@@ -279,7 +303,7 @@ a {
     transform: scale(1.2, 1.2);
 }
 #noteContent {
-    max-height: 99vh;
+    height: 84vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
