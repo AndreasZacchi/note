@@ -11,7 +11,9 @@
     --flatBlue: #558C8C;
     --spiceColor: #FF7F50;
 }
-
+.grid-container {
+    background: var(--secondColor);
+}
 body {
     margin: 0;
     padding: 0;
