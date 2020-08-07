@@ -2,6 +2,7 @@
     --mainColor: #272932;
     --secondColor: #1E1E20;
     --accentColor: #1e2e35;
+    --white: #F5F5FC;
     /*--flatRed: #FE5F55;
     --flatGreen: #82D173;
     --lightBlue: #2E86AB;*/
@@ -192,7 +193,7 @@ a {
 
 }
 .documentTitle {
-    font-size: 1.8vw;
+    font-size: 30px;
     transition: 0.2s;
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
@@ -209,10 +210,10 @@ a {
 }
 
 .fa-folder, .fa-sticky-note {
-    font-size: 1.5vw;
+    font-size: 24px;
 }
 .documentDates {
-    font-size: 1.5vw;
+    font-size: 24px;
     display: flex;
     align-items: center;
 }
@@ -233,35 +234,45 @@ a {
     visibility: hidden;
     position: absolute;
 }
+#noteContent {
+    height: 85%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 /* Note formating */
 #noteTextFormat {
     border: 1px solid black;
-    height: 10vh;
+    height: 10%;
     width: 100%;
+    display: flex;
 }
 #noteContainer {
-    background: var(--secondColor)
+    background: var(--secondColor);
+    height: 99vh;
 }
 .formatBtn {
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
+    border: none;
     font-size: 20px;
     background: white;
     color: black;
-    margin: 10px;
     text-align: center;
-    display: inline-block;
     cursor: pointer;
+    margin: 5px;
 }
-.formatDivider {
+.formatInput {
+    width: 50px;
     height: 30px;
-    width: 1px;
-    background: white;
+    border: none;
+}
+.btnHolder {
+    border-right: 1px solid white;
 }
 /* notefooter */
 #noteFooter {
     background: white;
-    height: 5vh;
+    height: 5%;
     width: 100%;
     border: 1px solid black; 
 }
@@ -301,11 +312,6 @@ a {
 .buttonNote:hover {
     color: var(--spiceColor);
     transform: scale(1.2, 1.2);
-}
-#noteContent {
-    height: 84vh;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 /* Icons */
 .fa-trash-alt, .fa-pencil-alt {

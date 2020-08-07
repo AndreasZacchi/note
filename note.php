@@ -19,15 +19,41 @@
     </div>
     <div id="noteContainer" class="note">
         <div id="noteTextFormat">
-            <button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button>
-            <button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button>
-            <button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button>
-            <button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button>
-            <button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button>
-            <button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button>
-            <button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button>
-            <button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button>
-            <div class="formatDivider"></div>
+            <div class="btnHolder">
+                <button class="formatBtn" id="">U</button>
+                <button class="formatBtn" id="">R</button>
+                <button class="formatBtn" id="">C</button>
+                <button class="formatBtn" id="">CUT</button>
+                <button class="formatBtn" id="">P</button>
+            </div>
+            <div class="btnHolder">
+                <input type="text" name="fontName" class="formatInput" id="">
+            </div>
+            <div class="btnHolder">
+                <input type="text" name="fontSize" class="formatInput" id="">
+                <button class="formatBtn" id="">fUp</button>
+                <button class="formatBtn" id="">fDown</button>
+            </div>
+            <div class="btnHolder">
+                <button class="formatBtn" id="">fC</button>
+                <button class="formatBtn" id="">bC</button>
+            </div>
+            <div class="btnHolder">
+                <button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button>
+                <button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button>
+                <button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button>
+                <button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button>
+            </div>
+            <div class="btnHolder">
+                <button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button>
+                <button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button>
+                <button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button>
+                <button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button>
+            </div>
+            <div class="btnHolder">
+                <button class="formatBtn" id="">Ul</button>
+                <button class="formatBtn" id="">Li</button>
+            </div>
         </div>
         <div id="noteContent" contenteditable="false"></div>
         <div id="noteFooter"></div>
