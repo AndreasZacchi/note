@@ -7,6 +7,7 @@
 ?>
 <script src="includes/folders.js"></script>
 <script src="includes/notes.js"></script>
+
 <script>
     $(document).ready(function () {
         getAll(path);
@@ -19,40 +20,60 @@
     </div>
     <div id="noteContainer" class="note">
         <div id="noteTextFormat">
-            <div class="btnHolder">
-                <button class="formatBtn" id="">U</button>
-                <button class="formatBtn" id="">R</button>
-                <button class="formatBtn" id="">C</button>
-                <button class="formatBtn" id="">CUT</button>
-                <button class="formatBtn" id="">P</button>
-            </div>
-            <div class="btnHolder">
-                <input type="text" name="fontName" class="formatInput" id="">
-            </div>
-            <div class="btnHolder">
-                <input type="text" name="fontSize" class="formatInput" id="">
-                <button class="formatBtn" id="">fUp</button>
-                <button class="formatBtn" id="">fDown</button>
-            </div>
-            <div class="btnHolder">
-                <button class="formatBtn" id="">fC</button>
-                <button class="formatBtn" id="">bC</button>
-            </div>
-            <div class="btnHolder">
-                <button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button>
-                <button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button>
-                <button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button>
-                <button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button>
-            </div>
-            <div class="btnHolder">
-                <button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button>
-                <button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button>
-                <button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button>
-                <button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button>
-            </div>
-            <div class="btnHolder">
-                <button class="formatBtn" id="">Ul</button>
-                <button class="formatBtn" id="">Li</button>
+            <div class="noteInfo">a</div>
+            <div class="formatContainer">
+                <div class="btnHolder">
+                    <div class="formatBtnContainer">
+                        <button class="formatBtn" id=""><i class="fas fa-share" style="transform: scaleX(-1)"></i></button>
+                        <div class="formatBtnDisc">Undo</div>
+                    </div>
+                    <div class="formatBtnContainer">
+                        <button class="formatBtn" id=""><i class="fas fa-share"></i></button>
+                        <div class="formatBtnDisc">Redo</div>
+                    </div>
+                    <div class="formatBtnContainer">
+                        <button class="formatBtn" id=""><i class="far fa-copy"></i></button>
+                        <div class="formatBtnDisc">Copy</div>
+                    </div>
+                    <div class="formatBtnContainer">
+                        <button class="formatBtn" id=""><i class="fas fa-cut"></i></button>
+                        <div class="formatBtnDisc">Cut</div>
+                    </div>
+                    <div class="formatBtnContainer">
+                        <button class="formatBtn" id=""><i class="far fa-clipboard"></i></button>
+                        <div class="formatBtnDisc">Paste</div>
+                    </div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer">
+                        <input type="text" value="Font" name="fontName" class="formatInput" id="">
+                    </div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer"><input type="text" value="Font Size" name="fontSize" class="formatInput" id=""></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-chevron-up"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-chevron-down"></i></button></div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer"><button class="formatBtn" id="">fC</button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="">bC</button></div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button></div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button></div>
+                </div>
+                <div class="btnHolder">
+                    <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-list-ul"></i></button></div>
+                    <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-list-ol"></i></button></div>
+                </div>
             </div>
         </div>
         <div id="noteContent" contenteditable="false"></div>

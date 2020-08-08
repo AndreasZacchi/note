@@ -2,13 +2,13 @@
     --mainColor: #272932;
     --secondColor: #1E1E20;
     --accentColor: #1e2e35;
-    --white: #F5F5FC;
+    --textColor: #E2E2E2;
     /*--flatRed: #FE5F55;
-    --flatGreen: #82D173;
-    --lightBlue: #2E86AB;*/
+    --flatGreen: #82D173;*/
+    --lightBlue: #2E86AB;
     --flatRed: #c47066;
     --flatGreen: #c7c37f;
-    --lightBlue: #51966d;
+    --lightGreen: #51966d;
     --flatBlue: #558C8C;
     --spiceColor: #FF7F50;
 }
@@ -235,44 +235,87 @@ a {
     position: absolute;
 }
 #noteContent {
-    height: 85%;
+    flex: 85%;
     overflow-x: hidden;
     overflow-y: auto;
 }
+/* Note container flex */
+#noteContainer {
+    display: flex;
+    flex-direction: column;
+}
 /* Note formating */
 #noteTextFormat {
-    border: 1px solid black;
-    height: 10%;
+    flex: 10%;
     width: 100%;
-    display: flex;
 }
 #noteContainer {
     background: var(--secondColor);
-    height: 99vh;
+    height: 100vh;
+}
+.noteInfo {
+    height: 30%;
+    width: 100%;
+}
+.formatContainer {
+    border: 1px solid black;
+    padding: 10px 0;
+    width: 100%;
+    background: #E2E2E2;
+    display: flex;
+    align-items: center;
+}
+.formatBtnContainer {
 }
 .formatBtn {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    margin: 5px;
+    width: 40px;
     border: none;
-    font-size: 20px;
+    font-size: 25px;
+    color: #2D2D2D;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.formatBtnDisc {
+    transition: 0.2s;
+    border-radius: 20px;
+    padding: 2px 5px; 
     background: white;
     color: black;
-    text-align: center;
-    cursor: pointer;
-    margin: 5px;
+    position: absolute;
+    top: 90px;
+    visibility: hidden;
+    opacity: 0;
+}
+.formatBtn:hover + .formatBtnDisc {
+    visibility: visible;
+    opacity: 1;
+}
+.formatBtn:hover {
+    background: #B2B2B2;
+}
+.formatBtnActive {
+    background: #B2B2B2;
 }
 .formatInput {
-    width: 50px;
-    height: 30px;
+    width: 75px;
+    height: 40px;
     border: none;
+    margin: 4px 5px;
+    font-size: 25px;
+    font-family: source sans pro;
 }
 .btnHolder {
-    border-right: 1px solid white;
+    border-right: 2px solid #2D2D2D;
+    display: inherit;
 }
 /* notefooter */
 #noteFooter {
     background: white;
-    height: 5%;
+    flex: 3%;
     width: 100%;
     border: 1px solid black; 
 }
@@ -283,7 +326,6 @@ a {
 }
 .noteNavbar {
     background: var(--mainColor);
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-items: stretch;
@@ -310,7 +352,7 @@ a {
     float: none !important;
 }
 .buttonNote:hover {
-    color: var(--spiceColor);
+    color: var(--lightBlue);
     transform: scale(1.2, 1.2);
 }
 /* Icons */
