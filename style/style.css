@@ -28,9 +28,11 @@ body {
     z-index: 1;
 }
 #titleContainer {
-    margin: 23.6% 0;
+    height: 100vh;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #typeWrittenHeader, .titleStyle {
     position: relative;
@@ -246,24 +248,23 @@ a {
 }
 /* Note formating */
 #noteTextFormat {
-    flex: 10%;
-    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    border: 1px solid black;
+    width: 95%;
+    background: #E2E2E2;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+.formatBtnDiv {
+    width: 2px;
+    height: 75%;
+    background: #2D2D2D;
 }
 #noteContainer {
     background: var(--secondColor);
     height: 100vh;
-}
-.noteInfo {
-    height: 30%;
-    width: 100%;
-}
-.formatContainer {
-    border: 1px solid black;
-    padding: 10px 0;
-    width: 100%;
-    background: #E2E2E2;
-    display: flex;
-    align-items: center;
 }
 .formatBtnContainer {
 }
@@ -286,7 +287,7 @@ a {
     background: white;
     color: black;
     position: absolute;
-    top: 90px;
+    top: 50px;
     visibility: hidden;
     opacity: 0;
 }
@@ -394,3 +395,63 @@ a .far:hover {
   ::-webkit-scrollbar-thumb:hover {
     background: #FF5A1F;
   }
+  
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: var(--secondColor);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #8a8a8a;
+  }
+  
+  /* The search field */
+  #fontTypeInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #fontTypeInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .fontTypeDropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

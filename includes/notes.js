@@ -33,6 +33,16 @@ $(document).ready(function () {
         event.preventDefault();
         document.execCommand('justifyFull');
     });
+
+    $('#fontTypeArial').mousedown(function() {
+        event.preventDefault();
+        document.execCommand('fontName', "Arial");
+    });
+    $('#fontTypeComicSans').mousedown(function() {
+        event.preventDefault();
+        document.execCommand('fontName', "Comic Sans");
+    });
+
 });
 
 function isSelected() {
@@ -103,6 +113,7 @@ function ifChecker() {
     setTimeout(ifChecker, 100);
 }
 
+
 function loadNote(noteID) {
     $(document).ready(function () {
         jQuery.ajax({
@@ -120,6 +131,28 @@ function loadNote(noteID) {
         })
     });
 }
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function toggleDropdown() {
+    document.getElementById("fontTypeDropdown").classList.toggle("show");
+  }
+  
+  function filterFontType() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("fontTypeInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("fontTypeDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
 
 let oldContent;
 function saveNote(noteID) {
