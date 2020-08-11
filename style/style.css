@@ -224,7 +224,7 @@ a {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 4fr 15fr 1fr;
+    grid-template-columns: 20vw 75vw 5vw;
     grid-template-rows: 100vh;
 }
 .folderBar {
@@ -237,7 +237,8 @@ a {
     position: absolute;
 }
 #noteContent {
-    flex: 85%;
+    flex: auto;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -245,32 +246,28 @@ a {
 #noteContainer {
     display: flex;
     flex-direction: column;
+    background: var(--secondColor);
+    height: 100vh;
 }
 /* Note formating */
 #noteTextFormat {
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     display: flex;
-    border: 1px solid black;
     width: 95%;
     background: #E2E2E2;
     align-items: center;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .formatBtnDiv {
     width: 2px;
-    height: 75%;
+    height: 40px;
     background: #2D2D2D;
-}
-#noteContainer {
-    background: var(--secondColor);
-    height: 100vh;
 }
 .formatBtnContainer {
 }
 .formatBtn {
     height: 40px;
-    margin: 5px;
     width: 40px;
     border: none;
     font-size: 25px;
@@ -309,16 +306,13 @@ a {
     font-size: 25px;
     font-family: source sans pro;
 }
-.btnHolder {
-    border-right: 2px solid #2D2D2D;
-    display: inherit;
-}
 /* notefooter */
 #noteFooter {
-    background: white;
-    flex: 3%;
-    width: 100%;
-    border: 1px solid black; 
+    background: #E2E2E2;
+    height: 40px;
+    width: 85%;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
 }
 /* Navbar */
 .logoutNoteButton {

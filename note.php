@@ -54,23 +54,65 @@
             <div class="formatBtnContainer">
                 <input type="text" value="Font Size" name="fontSize" class="formatInput" id="">
             </div>
-            <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-chevron-up"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-chevron-down"></i></button></div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id=""><i class="fas fa-chevron-up"></i></button>
+                <div class="formatBtnDisc">Increase font size</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id=""><i class="fas fa-chevron-down"></i></button>
+                <div class="formatBtnDisc">Decrease font size</div>
+            </div>
             <div class="formatBtnDiv"></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="">fC</button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="">bC</button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button></div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="">fC</button>
+                <div class="formatBtnDisc">Font color</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="">bC</button>
+                <div class="formatBtnDisc">Back color</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagB"><i class="fas fa-bold"></i></button>
+                <div style="font-weight: bold;" class="formatBtnDisc">Bold</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagI"><i class="fas fa-italic"></i></button>
+                <div style="font-style: italic;" class="formatBtnDisc">Italic</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagU"><i class="fas fa-underline"></i></button>
+                <div style="text-decoration:underline;" class="formatBtnDisc">Underline</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagS"><i class="fas fa-strikethrough"></i></button>
+                <div style="text-decoration:line-through;" class="formatBtnDisc">Line through</div>
+            </div>
             <div class="formatBtnDiv"></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button></div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagJL"><i class="fas fa-align-left"></i></button>
+                <div class="formatBtnDisc">Align text left</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagJC"><i class="fas fa-align-center"></i></button>
+                <div class="formatBtnDisc">Align text center</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagJR"><i class="fas fa-align-right"></i></button>
+                <div class="formatBtnDisc">Align text right</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id="tagJF"><i class="fas fa-align-justify"></i></button>
+                <div class="formatBtnDisc">Align text full</div>
+            </div>
             <div class="formatBtnDiv"></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-list-ul"></i></button></div>
-            <div class="formatBtnContainer"><button class="formatBtn" id=""><i class="fas fa-list-ol"></i></button></div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id=""><i class="fas fa-list-ul"></i></button>
+                <div class="formatBtnDisc">Unordered list</div>
+            </div>
+            <div class="formatBtnContainer">
+                <button class="formatBtn" id=""><i class="fas fa-list-ol"></i></button>
+                <div class="formatBtnDisc">Ordered list</div>
+            </div>
         </div>
         <div id="noteContent" contenteditable="false"></div>
         <div id="noteFooter"></div>
