@@ -253,11 +253,14 @@ a {
 #noteTextFormat {
     border-radius: 0 0 25px 25px;
     display: flex;
+    flex-wrap: wrap;
     width: 95%;
     background: #E2E2E2;
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
+    align-content: center;
+    padding: 10px;
 }
 .formatBtnDiv {
     width: 2px;
@@ -332,7 +335,7 @@ a {
 #buttonNote {
     color: white;
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 2.5vw;
     transition: 0.2s;
 }
 .fa-sign-out-alt:hover {
@@ -342,7 +345,7 @@ a {
 .buttonNote {
     color: white;
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 2.5vw;
     transition: 0.2s;
     float: none !important;
 }
@@ -392,17 +395,15 @@ a .far:hover {
   
 /* Dropdown Button */
 .dropbtn {
-    background-color: white;
     color: var(--secondColor);
-    padding: 16px;
-    font-size: 16px;
+    font-size: 25px;
     border: none;
     cursor: pointer;
   }
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #8a8a8a;
+    /* background-color: #8a8a8a; */
   }
   
   /* The search field */

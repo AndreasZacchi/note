@@ -43,7 +43,7 @@
             <div class="formatBtnDiv"></div>
             <div class="formatBtnContainer">
             <div class="fontTypeDropdown">
-                <button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+                <button onclick="toggleDropdown()" class="dropbtn formatBtn"><i class="fas fa-font"></i></button>
                 <div id="fontTypeDropdown" class="dropdown-content">
                     <input type="text" placeholder="Search.." id="fontTypeInput" onkeyup="filterFontType()">
                     <button id="fontTypeArial" style="font-family: Arial;">Arial</button>
@@ -52,7 +52,8 @@
             </div>
             </div>
             <div class="formatBtnContainer">
-                <input type="text" value="Font Size" name="fontSize" class="formatInput" id="">
+                <button class="formatBtn"><i class="fas fa-text-height"></i></button>
+                <div class="formatBtnDisc">Font size</div>
             </div>
             <div class="formatBtnContainer">
                 <button class="formatBtn" id=""><i class="fas fa-chevron-up"></i></button>
@@ -121,7 +122,7 @@
         <div id="newContainer" class="noteNavbarContent"></div>
         <div id="newContainer1" class="noteNavbarContent"></div>
         <div class="noteNavbarContent"><a title="Steam Group" href="https://steamcommunity.com/groups/watdoink" target="_blank"><i class="fab fa-steam-symbol buttonNote"></i></a></div>
-        <div class="noteNavbarContent"><a title="Podcast" href="#" target="_blank"><i class="fas fa-podcast buttonNote"></i></a></div>
+        <div class="noteNavbarContent"><a title="Settings" href="#"><i class="fas fa-cog buttonNote"></i></a></div>
         <div class="noteNavbarContent"><a title="Home" href="index.php"><i class="fas fa-home buttonNote"></i></a></div>
         <div class="noteNavbarContent"><form action="includes/logout.inc.php" method="post"><button title="Log Out" class="logoutNoteButton" type="submit" name="logout-submit"><i id="buttonNote" class="fas fa-sign-out-alt"></i></button></form></div>
     </div>
