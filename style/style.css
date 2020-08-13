@@ -253,8 +253,6 @@ a {
 #noteTextFormat {
     border-radius: 0 0 25px 25px;
     display: flex;
-    flex-wrap: wrap;
-    flex-grow: 0;
     width: 95%;
     background: #E2E2E2;
     align-items: center;
@@ -315,8 +313,8 @@ a {
         border-radius: 0px;
         width: 100%;
         padding: 10px 0;
-    }
-    .formatBtn {
+        display: grid;
+        grid-template-columns: 
     }
 }
 /* notefooter */
@@ -350,7 +348,7 @@ a {
 }
 .fa-sign-out-alt:hover {
     color: var(--flatRed) !important;
-    transform: scale(1.4, 1.4)
+    transform: scale(1.4, 1.4);
 }
 .buttonNote {
     color: white;
@@ -390,17 +388,17 @@ a .far:hover {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #FFD2C2;
+    background: var(--accentColor);
 }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--spiceColor);
+    background: #2d4652;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #FF5A1F;
+    background: #3f6373;
   }
   
 /* Dropdown Button */
