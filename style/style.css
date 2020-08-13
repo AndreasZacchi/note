@@ -259,7 +259,6 @@ a {
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
-    align-content: center;
     padding: 10px;
 }
 .formatBtnDiv {
@@ -308,6 +307,16 @@ a {
     margin: 4px 5px;
     font-size: 25px;
     font-family: source sans pro;
+}
+/* Media Q that makes formatBox squared and 2 rows*/
+@media screen and (max-width: 1300px) {
+    #noteTextFormat {
+        border-radius: 0px;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .formatBtn {
+    }
 }
 /* notefooter */
 #noteFooter {
