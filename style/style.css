@@ -397,7 +397,7 @@ a .far:hover {
   }
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  /* ::-webkit-scrollbar-thumb:hover { */
     background: #3f6373;
   }
   
