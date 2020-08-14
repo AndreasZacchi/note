@@ -253,6 +253,7 @@ a {
 #noteTextFormat {
     border-radius: 0 0 25px 25px;
     display: flex;
+    flex-wrap: wrap;
     width: 95%;
     background: #E2E2E2;
     align-items: center;
@@ -291,7 +292,7 @@ a {
 }
 .formatBtn:hover + .formatBtnDisc {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.7;
 }
 .formatBtn:hover {
     background: #B2B2B2;
@@ -310,11 +311,10 @@ a {
 /* Media Q that makes formatBox squared and 2 rows*/
 @media screen and (max-width: 1300px) {
     #noteTextFormat {
-        border-radius: 0px;
-        width: 100%;
-        padding: 10px 0;
-        display: grid;
-        grid-template-columns: 
+        border-radius: 0 0 50px 50px;
+        width: 95%;
+        padding: 10px;
+        display: 
     }
 }
 /* notefooter */
