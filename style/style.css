@@ -156,7 +156,7 @@ a {
     right: 101%;
     top: 0;
     opacity: 0;
-    font-size: 7vh;
+    font-size: 3.5vw;
     z-index: 1;
 }
 :focus {
@@ -222,15 +222,20 @@ a {
 .createDate {
     text-align: center;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: 25vw 70vw 5vw;
-    grid-template-rows: 100vh;
+.flex-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* grid-template-columns: 25vw 70vw 5vw;
+    grid-template-rows: 100vh; */
 }
 .folderBar {
     background: var(--mainColor);
+    resize: horizontal;
     overflow: auto;
     overflow-x: hidden;
+    min-width: 20vw;
+    max-width: 30vw;
 }
 #currentPath {
     visibility: hidden;
@@ -247,7 +252,8 @@ a {
     display: flex;
     flex-direction: column;
     background: var(--secondColor);
-    height: 100vh;
+    /* height: 100vh; */
+    flex: 1;
 }
 /* Note formating */
 #noteTextFormat {
@@ -280,11 +286,12 @@ a {
     transition: 0.2s;
 }
 .formatBtnDisc {
+    border: 2px solid #B2B2B2;
     transition: 0.2s;
     border-radius: 20px;
     padding: 2px 5px; 
-    background: white;
-    color: black;
+    background: #808080;
+    color: white;
     position: absolute;
     top: 60px;
     visibility: hidden;
@@ -292,7 +299,7 @@ a {
 }
 .formatBtn:hover + .formatBtnDisc {
     visibility: visible;
-    opacity: 0.7;
+    opacity: 1;
 }
 .formatBtn:hover {
     background: #B2B2B2;
@@ -335,6 +342,8 @@ a {
     flex-direction: column;
     justify-items: stretch;
     justify-content: space-evenly;
+    max-width: 5vw;
+    min-width: 5vw;
 }
 .noteNavbarContent {
     text-align: center;
