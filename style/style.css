@@ -140,6 +140,19 @@ body {
 }
 /*BLOG-END*/
 /* NoteFolderBar */
+.folderBar {
+    padding-right: -10px;
+}
+.folderBar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    display: none;
+}
+.folderBar:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+.folderBar::-webkit-scrollbar-track {
+    background: none;
+}
 a {
     text-decoration: none;
     color: white;
@@ -408,7 +421,6 @@ a .far:hover {
   /* ::-webkit-scrollbar-thumb:hover { */
     background: #3f6373;
   }
-  
 /* Dropdown Button */
 .dropbtn {
     color: var(--secondColor);
