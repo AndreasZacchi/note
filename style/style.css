@@ -2,7 +2,7 @@
     --mainColor: #272932;
     --secondColor: #1E1E20;
     --accentColor: #1e2e35;
-    --textColor: #E2E2E2;
+    --textColor: #d9d9d9;
     /*--flatRed: #FE5F55;
     --flatGreen: #82D173;*/
     --lightBlue: #2E86AB;
@@ -20,7 +20,7 @@ body {
     padding: 0;
     font-family: source sans pro;
     background-color: var(--mainColor);
-    color: #ffffff;
+    color: var(--textColor);
 }
 /*Typewriter*/
 #typeWrittenHeader, #aboutUsTitle, #homeTitle, #functionsTitle, #contactTitle, #newsletterTitle {
@@ -156,7 +156,7 @@ a {
     right: 101%;
     top: 0;
     opacity: 0;
-    font-size: 5vh;
+    font-size: 7vh;
     z-index: 1;
 }
 :focus {
@@ -311,7 +311,6 @@ a {
 /* Media Q that makes formatBox squared and 2 rows*/
 @media screen and (max-width: 1300px) {
     #noteTextFormat {
-        border-radius: 0 0 50px 50px;
         width: 95%;
         padding: 10px;
         display: 
