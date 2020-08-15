@@ -1,26 +1,47 @@
-:root {
+/* :root {
     --mainColor: #272932;
     --secondColor: #1E1E20;
     --accentColor: #1e2e35;
-    --textColor: #d9d9d9;
-    /*--flatRed: #FE5F55;
-    --flatGreen: #82D173;*/
+    --textColor1: rgba(255, 255, 255, 0.87);
+    --textColor2: rgba(255, 255, 255, 0.60);
+    --textColor3: rgba(255, 255, 255, 0.38);
+    --flatRed: #FE5F55;
+    --flatGreen: #82D173;
     --lightBlue: #2E86AB;
     --flatRed: #c47066;
     --flatGreen: #c7c37f;
     --lightGreen: #51966d;
+    --lightGreen: #51BC74;
     --flatBlue: #558C8C;
     --spiceColor: #FF7F50;
-}
-.grid-container {
-    background: var(--secondColor);
+} */
+:root {
+    --dp0: #121212;
+    --dp1: rgba(255, 255, 255, 0.05);
+    --dp2: rgba(255, 255, 255, 0.07);
+    --dp3: rgba(255, 255, 255, 0.08);
+    --dp4: rgba(255, 255, 255, 0.09);
+    --dp6: rgba(255, 255, 255, 0.11);
+    --dp8: rgba(255, 255, 255, 0.12);
+    --dp12: rgba(255, 255, 255, 0.14);
+    --dp16: rgba(255, 255, 255, 0.15);
+    --dp24: rgba(255, 255, 255, 0.16);
+    --textColor1: rgba(255, 255, 255, 0.87);
+    --textColor2: rgba(255, 255, 255, 0.60);
+    --textColor3: rgba(255, 255, 255, 0.38);
+    --flatRed: #c47066;
+    --spiceColor: #FF7F50;
 }
 body {
     margin: 0;
     padding: 0;
     font-family: source sans pro;
-    background-color: var(--mainColor);
-    color: var(--textColor);
+    background-color: var(--dp0);
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 /*Typewriter*/
 #typeWrittenHeader, #aboutUsTitle, #homeTitle, #functionsTitle, #contactTitle, #newsletterTitle {
@@ -45,7 +66,12 @@ body {
     font-size: 100px;
 }
 /*Typewriter-END*/
-/*LoginStuff*/
+/*Login*/
+.loginDivContainer {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
 .errormessage {
     color: var(--flatRed);
 }
@@ -53,27 +79,23 @@ body {
     color: var(--flatGreen);
 }
 .loginDiv {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 50%;
 }
 .loginDiv, .signupDiv, .resetPasswordDiv, .createPasswordDiv {
     text-align: center;
     font-family: source sans pro;
-    color: white;
+    color: var(--textColor1);
 }
 
 .input {
     padding: 8px;
     display: block;
     border: none;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid var(--textColor1);
     background-color: var(--mainColor);
+    color: var(--textColor1);
     width: 50%;
     margin: 0 auto 5px;
-    color: #fff;
     transition: 0.5s;
 }
 
@@ -138,52 +160,92 @@ body {
     margin: 0;
     text-transform: capitalize;
 }
-/*BLOG-END*/
+/* NoteGrid */
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw);
+}
 /* NoteFolderBar */
 .folderBar {
-    padding-right: -10px;
+    background: var(--dp1);
+    overflow: auto;
+    overflow-x: hidden;
 }
-.folderBar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    display: none;
+.documentBox {
+    height: 20vh;
+    transition: 0.2s;
+    cursor: pointer;
+    border-bottom: 2px solid var(--dp0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.folderBar:hover::-webkit-scrollbar-thumb {
-    display: block;
+.documentBox:hover {
+    background: var(--dp2);
 }
-.folderBar::-webkit-scrollbar-track {
-    background: none;
+.documentBox:focus {
+    background: var(--dp2);
 }
-a {
-    text-decoration: none;
-    color: white;
+/* Folder/FileDetails */
+.documentTitle {
+    font-size: 30px;
+    color: var(--textColor1);
+    transition: 0.2s;
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: center;
+}
+.fa-folder, .fa-sticky-note {
+    font-size: 24px;
+    color: var(--textColor3);
+    margin: 10px;
+}
+.documentDates {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--textColor3);
+}
+.createDate {
+    text-align: center;
 }
 .documentDetails {
     visibility: hidden;
+    overflow: hidden;
+    background: #222222;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    transition: 0.5s;
+    transition: 0.4s;
+    transform: scale(0, 0);
     position: absolute;
-    right: 101%;
-    top: 0;
     opacity: 0;
     font-size: 3.5vw;
     z-index: 1;
 }
-:focus {
-    border: none;
-}
 .documentDetails:focus {
     visibility: visible;
-    right: 0;
     opacity: 1;
+    transform: scale(0.9, 0.9);
 }
 .documentBox:focus > .documentDetails {
     visibility: visible;
-    right: 0;
     opacity: 1;
+    transform: scale(0.9, 0.9);
 }
 .openDiv {
     grid-column: 1 / 3;
@@ -195,78 +257,25 @@ a {
     transition: 0.2s;
     cursor: pointer;
 }
-/* Folder/File Div */
-.documentBox {
-    height: 20vh;
-    cursor: pointer;
-    border-bottom: 1px solid black;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
+.editDocument:hover {
+    background: var(--dp3);
 }
-.documentTitle {
-    font-size: 30px;
-    transition: 0.2s;
-    /* These are technically the same, but use both */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-
-    -ms-word-break: break-all;
-    word-break: break-word;
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    text-align: center;
+.folderBar::-webkit-scrollbar {
+    width: 5px;
 }
 
-.fa-folder, .fa-sticky-note {
-    font-size: 24px;
-}
-.documentDates {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-}
-.createDate {
-    text-align: center;
-}
-.flex-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    /* grid-template-columns: 25vw 70vw 5vw;
-    grid-template-rows: 100vh; */
-}
-.folderBar {
-    background: var(--mainColor);
-    resize: horizontal;
-    overflow: auto;
-    overflow-x: hidden;
-    min-width: 20vw;
-    max-width: 30vw;
-}
+/* Stuff DONT CHANGE */
 #currentPath {
     visibility: hidden;
     position: absolute;
 }
-#noteContent {
-    flex: auto;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+/* Note */
 /* Note container flex */
 #noteContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     background: var(--secondColor);
     /* height: 100vh; */
-    flex: 1;
 }
 /* Note formating */
 #noteTextFormat {
@@ -274,7 +283,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     width: 95%;
-    background: #E2E2E2;
+    background: var(--dp6);
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
@@ -283,7 +292,6 @@ a {
 .formatBtnDiv {
     width: 2px;
     height: 40px;
-    background: #2D2D2D;
 }
 .formatBtnContainer {
 }
@@ -292,19 +300,18 @@ a {
     width: 40px;
     border: none;
     font-size: 25px;
-    color: #2D2D2D;
+    color: var(--textColor2);
     background: none;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.2s;
 }
 .formatBtnDisc {
-    border: 2px solid #B2B2B2;
     transition: 0.2s;
     border-radius: 20px;
     padding: 2px 5px; 
-    background: #808080;
-    color: white;
+    background: var(--dp8);
+    color: var(--textColor1);
     position: absolute;
     top: 60px;
     visibility: hidden;
@@ -315,10 +322,10 @@ a {
     opacity: 1;
 }
 .formatBtn:hover {
-    background: #B2B2B2;
+    background: var(--dp8);
 }
 .formatBtnActive {
-    background: #B2B2B2;
+    background: var(--dp8);
 }
 .formatInput {
     width: 75px;
@@ -336,9 +343,16 @@ a {
         display: 
     }
 }
+/* NoteContent */
+#noteContent {
+    flex: auto;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 /* notefooter */
 #noteFooter {
-    background: #E2E2E2;
+    background: var(--dp6);
     height: 40px;
     width: 85%;
     margin: auto;
@@ -350,54 +364,34 @@ a {
     border: none !important;
 }
 .noteNavbar {
-    background: var(--mainColor);
+    background: var(--dp1);
     display: flex;
     flex-direction: column;
     justify-items: stretch;
     justify-content: space-evenly;
-    max-width: 5vw;
-    min-width: 5vw;
 }
 .noteNavbarContent {
     text-align: center;
 }
 #buttonNote {
-    color: white;
+    color: var(--textColor1);
     cursor: pointer;
-    font-size: 2.5vw;
+    font-size: 40px;
     transition: 0.2s;
 }
 .fa-sign-out-alt:hover {
-    color: var(--flatRed) !important;
     transform: scale(1.4, 1.4);
 }
 .buttonNote {
-    color: white;
+    color: var(--textColor1);
     cursor: pointer;
-    font-size: 2.5vw;
+    font-size: 40px;
     transition: 0.2s;
     float: none !important;
 }
 .buttonNote:hover {
     color: var(--lightBlue);
     transform: scale(1.2, 1.2);
-}
-/* Icons */
-.fa-trash-alt, .fa-pencil-alt {
-    transition: 0.2s;
-}
-.fa-pencil-alt:hover {
-    color: var(--flatGreen);
-}
-a .far:hover {
-    color: var(--flatRed);
-}
-.fa-arrow-left {
-    color: white !important;
-}
-.fa-folder, .fa-sticky-note, .fa-arrow-left {
-    float: left !important;
-    margin-right: 5px;
 }
 /* Removes irritating outline */
 :focus {

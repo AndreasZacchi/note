@@ -13,7 +13,7 @@
         getAll(path);
     });
 </script>
-<div class="flex-container">
+<div class="grid-container">
     <div class="folderBar">
         <div class="navHeader"></div>
         <div id="foldersandfiles"></div>

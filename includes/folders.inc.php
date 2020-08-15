@@ -135,9 +135,9 @@ function listFromTree() {
                 <div class="documentTitle">'.$name.'</div>
                 <div><i class="fa fa-folder" aria-hidden="true"></i></div>
                     <div class="documentDetails">
-                    <div style="background: var(--lightGreen);" class="editDocument openDiv" onclick="getAll(\''.$path.'\');">Open</div>
-                    <div style="background: var(--flatGreen);" class="editDocument" onclick="renameFolder('.$t["id"].', \''.$t["name"].'\', \''.base64_encode($t["path"]).'\');">Edit</div>
-                    <div style="background: var(--flatRed);" class="editDocument" onclick="deleteFolder('.$t["id"].');">Delete</div>
+                    <div class="editDocument openDiv" onclick="getAll(\''.$path.'\');">Open</div>
+                    <div class="editDocument" onclick="renameFolder('.$t["id"].', \''.$t["name"].'\', \''.base64_encode($t["path"]).'\');">Edit</div>
+                    <div class="editDocument" onclick="deleteFolder('.$t["id"].');">Delete</div>
                 </div>
             </div>';      
         }
@@ -156,9 +156,9 @@ function listFromTree() {
                 <div class="documentTitle">'.$title.'</div>
                 <div class="documentDates"><i class="fa fa-sticky-note" aria-hidden="true"></i>'.$t["createDate"].'</div>
                 <div class="documentDetails">
-                    <div style="background: var(--lightGreen);" class="editDocument openDiv" onclick="loadNote(\''.$t['id'].'\')">Open</div>
-                    <div style="background: var(--flatGreen);" class="editDocument" onclick="renameNote('.$t["id"].', \''.$t["title"].'\', \''.$path.'\');">Edit</div>
-                    <div style="background: var(--flatRed);" class="editDocument" onclick="deleteNote('.$t["id"].', \''.$path.'\');">Delete</div>
+                    <div class="editDocument openDiv" onclick="loadNote(\''.$t['id'].'\')">Open</div>
+                    <div class="editDocument" onclick="renameNote('.$t["id"].', \''.$t["title"].'\', \''.$path.'\');">Edit</div>
+                    <div class="editDocument" onclick="deleteNote('.$t["id"].', \''.$path.'\');">Delete</div>
                 </div>
             </div>';    
         }
