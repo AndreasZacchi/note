@@ -30,7 +30,8 @@
     --textColor2: rgba(255, 255, 255, 0.60);
     --textColor3: rgba(255, 255, 255, 0.38);
     --flatRed: #c47066;
-    --spiceColor: #FF7F50;
+    --flatGreen: #ACEA91;
+    --spiceColor: #DB8667;
 }
 body {
     margin: 0;
@@ -256,6 +257,13 @@ a {
 }
 .openDiv {
     grid-column: 1 / 3;
+    background: var(--flatGreen);
+}
+.editDiv {
+    background: var(--spiceColor);
+}
+.removeDiv {
+    background: var(--flatRed);
 }
 .editDocument {
     color: var(--textColor1);
@@ -265,8 +273,7 @@ a {
     transition: 0.2s;
     cursor: pointer;
 }
-.editDocument:hover {
-    background: var(--dp3);
+.editDocument:hover { 
     color: white;
 }
 .folderBar::-webkit-scrollbar {
@@ -293,6 +300,7 @@ a {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background: var(--secondColor);
+    overflow: hidden;
     /* height: 100vh; */
 }
 /* Note formating */
@@ -318,7 +326,7 @@ a {
     width: 40px;
     border: none;
     font-size: 25px;
-    color: var(--textColor2);
+    color: var(--textColor1);
     background: none;
     cursor: pointer;
     border-radius: 5px;
