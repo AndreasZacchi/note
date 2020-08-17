@@ -18,7 +18,7 @@
         let bleu = document.getElementById("folderToggleId");
         bleu.classList.toggle("folderToggle");
         let bleubleu = document.getElementById("iconToggle");
-        bleubleu.classList.toggle("iconToggle")
+        bleubleu.classList.toggle("iconToggle");
 }
 </script>
 <div class="grid-container">
@@ -139,7 +139,7 @@
         </div>
         <div id="noteContent" contenteditable="false"></div>
         <div id="noteFooter">
-        <button title="Toggle folder visibility" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-right"></i></button>
+        <button title="Toggle folder visibility" class="footerBtn" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-left"></i></button>
         </div>
     </div> 
     <div class="noteNavbar">

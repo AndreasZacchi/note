@@ -419,6 +419,24 @@ a {
     height: 40px;
     width: 100%;
 }
+.footerBtn {
+    height: 40px;
+    font-size: 32px;
+    border: none;
+    color: var(--textColor3);
+    background: var(--dp6);
+    transition: 0.2s
+}
+.footerBtn:hover {
+    color: var(--textColor1);
+    background: var(--dp16);
+    border-radius: 5px;
+}
+.btnToggle {
+    color: var(--textColor1);
+    background: var(--dp16);
+    border-radius: 5px;
+}
 /* Navbar */
 .logoutNoteButton {
     background: transparent;
