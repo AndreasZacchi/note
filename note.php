@@ -17,16 +17,21 @@
     function folderbarToggle() {
         let bleu = document.getElementById("folderToggleId");
         bleu.classList.toggle("folderToggle");
+        let bleubleu = document.getElementById("iconToggle");
+        bleubleu.classList.toggle("iconToggle")
 }
 </script>
 <div class="grid-container">
     <div id="folderToggleId" class="folderBar">
-        <div class="navHeader"></div>
+        <div class="navHeader">
+            <form class="searchContainer" action="">
+                <input class="navSearchInput" placeholder="Search..." type="text">
+            </form>
+        </div>
         <div id="foldersandfiles"></div>
     </div>
     <div id="noteContainer" class="note">
         <div id="noteTextFormat">
-        <button onclick="folderbarToggle()"><i class="fas fa-angle-double-right"></i></button>
             <div class="formatBtnGroup">
                 <div class="formatBtnContainer">
                     <button class="formatBtn" id=""><i class="fas fa-share" style="transform: scaleX(-1)"></i></button>
@@ -133,7 +138,9 @@
             </div>
         </div>
         <div id="noteContent" contenteditable="false"></div>
-        <div id="noteFooter"></div>
+        <div id="noteFooter">
+        <button title="Toggle folder visibility" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-right"></i></button>
+        </div>
     </div> 
     <div class="noteNavbar">
         <div id="newContainer" class="noteNavbarContent"></div>

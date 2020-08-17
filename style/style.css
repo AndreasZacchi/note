@@ -170,15 +170,37 @@ a {
 }
 /* NoteGrid */
 .grid-container {
-    display: grid;
+    display: flex;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw);
+    /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
 /* NoteFolderBar */
+/* Search input */
+.searchContainer {
+    width: 70%;
+    margin: 20px auto;
+}
+.navSearchInput {
+    transition: 0.2s;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    font-family: source sans pro;
+    background: var(--dp12);
+    color: var(--textColor1);
+}
+.navSearchInput:focus {
+    background: var(--dp24);
+}
 .folderBar {
-    visibility: visible;
-    position: relative;
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 200px;
+    max-width: 25vw;
     background: var(--dp1);
     overflow: auto;
     overflow-x: hidden;
@@ -204,8 +226,10 @@ a {
 /* Folder/FileDetails */
 /* Folder visibility toggle */
 .folderToggle {
-    visibility: hidden;
-    right: 100%;
+    display: none;
+}
+.iconToggle {
+    transform: rotate(180deg);
 }
 .documentTitle {
     font-size: 30px;
@@ -305,6 +329,7 @@ a {
 /* Note */
 /* Note container flex */
 #noteContainer {
+    flex: auto;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background: var(--secondColor);
@@ -321,7 +346,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 10px;
+    padding: 10px 0;
 }
 .formatBtnGroup { 
     display: inherit;
@@ -330,10 +355,12 @@ a {
 .formatBtnDiv {
     width: 2px;
     height: 40px;
+    margin-top: 3px;
     background: var(--dp24);
 }
 .formatBtnContainer {
     position: relative;
+    margin: 0 5px;
 }
 .formatBtn {
     margin: 3px;
@@ -376,14 +403,6 @@ a {
     font-size: 25px;
     font-family: source sans pro;
 }
-/* Media Q that makes formatBox squared and 2 rows*/
-@media screen and (max-width: 1300px) {
-    #noteTextFormat {
-        width: 95%;
-        padding: 10px;
-        display: 
-    }
-}
 /* NoteContent */
 #noteContent {
     flex: auto;
@@ -407,6 +426,7 @@ a {
 }
 .noteNavbar {
     background: var(--dp1);
+    width: 75px;
     display: flex;
     flex-direction: column;
     justify-items: stretch;
