@@ -170,17 +170,19 @@ a {
 }
 /* NoteGrid */
 .grid-container {
-    display: flex;
+    display: grid;
     height: 100vh;
     width: 100vw;
-    /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
+    grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw);
 }
 /* NoteFolderBar */
 .folderBar {
+    visibility: visible;
+    position: relative;
     background: var(--dp1);
     overflow: auto;
     overflow-x: hidden;
-    width: 25vw;
+    transition: 0.2s;
 }
 .documentBox {
     height: 20vh;
@@ -202,7 +204,8 @@ a {
 /* Folder/FileDetails */
 /* Folder visibility toggle */
 .folderToggle {
-    display: none;
+    visibility: hidden;
+    right: 100%;
 }
 .documentTitle {
     font-size: 30px;
@@ -403,7 +406,6 @@ a {
     border: none !important;
 }
 .noteNavbar {
-    width: 5vw;
     background: var(--dp1);
     display: flex;
     flex-direction: column;
