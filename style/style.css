@@ -170,16 +170,17 @@ a {
 }
 /* NoteGrid */
 .grid-container {
-    display: grid;
+    display: flex;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw);
+    /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
 /* NoteFolderBar */
 .folderBar {
     background: var(--dp1);
     overflow: auto;
     overflow-x: hidden;
+    width: 25vw;
 }
 .documentBox {
     height: 20vh;
@@ -199,6 +200,10 @@ a {
     background: var(--dp2);
 }
 /* Folder/FileDetails */
+/* Folder visibility toggle */
+.folderToggle {
+    display: none;
+}
 .documentTitle {
     font-size: 30px;
     color: var(--textColor1);
@@ -305,23 +310,30 @@ a {
 }
 /* Note formating */
 #noteTextFormat {
-    border-radius: 0 0 25px 25px;
+    /* border-radius: 0 0 25px 25px; */
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
+    width: 100%;
     background: var(--dp6);
     align-items: center;
+    justify-content: center;
     margin: auto;
-    justify-content: space-evenly;
     padding: 10px;
+}
+.formatBtnGroup { 
+    display: inherit;
+    width: auto;
 }
 .formatBtnDiv {
     width: 2px;
     height: 40px;
+    background: var(--dp24);
 }
 .formatBtnContainer {
+    position: relative;
 }
 .formatBtn {
+    margin: 3px;
     height: 40px;
     width: 40px;
     border: none;
@@ -372,17 +384,18 @@ a {
 /* NoteContent */
 #noteContent {
     flex: auto;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     overflow-x: hidden;
     overflow-y: auto;
+    background: var(--dp1);
+    color: var(--textColor1);
 }
 /* notefooter */
 #noteFooter {
     background: var(--dp6);
     height: 40px;
-    width: 85%;
-    margin: auto;
-    border-radius: 20px 20px 0 0;
+    width: 100%;
 }
 /* Navbar */
 .logoutNoteButton {
@@ -390,6 +403,7 @@ a {
     border: none !important;
 }
 .noteNavbar {
+    width: 5vw;
     background: var(--dp1);
     display: flex;
     flex-direction: column;
