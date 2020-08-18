@@ -172,7 +172,6 @@ a {
 .grid-container {
     display: flex;
     height: 100vh;
-    width: 100vw;
     /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
 /* NoteFolderBar */
@@ -202,7 +201,6 @@ a {
     min-width: 200px;
     max-width: 25vw;
     background: var(--dp1);
-    overflow: auto;
     overflow-x: hidden;
     transition: 0.2s;
 }
@@ -444,7 +442,6 @@ a {
 }
 .noteNavbar {
     background: var(--dp1);
-    width: 75px;
     display: flex;
     flex-direction: column;
     justify-items: stretch;
@@ -452,11 +449,12 @@ a {
 }
 .noteNavbarContent {
     text-align: center;
+    width: 70px;
 }
 #buttonNote {
     color: var(--textColor1);
     cursor: pointer;
-    font-size: 40px;
+    font-size: 38px;
     transition: 0.2s;
 }
 .fa-sign-out-alt:hover {
@@ -465,7 +463,7 @@ a {
 .buttonNote {
     color: var(--textColor1);
     cursor: pointer;
-    font-size: 40px;
+    font-size: 38px;
     transition: 0.2s;
     float: none !important;
 }
