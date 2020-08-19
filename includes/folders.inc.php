@@ -110,15 +110,19 @@ function listFromTree() {
 
         // If path is set and is not root, echo go back
         if(base64_decode($_SESSION['path64']) != "/") {
-            echo '<a class="goBackIcon" href="#" onclick="getAll(\''.goBackPath($path).'\');"><i class="fas fa-arrow-left" aria-hidden="true"></i>..</a>';
+            echo '<div class="folderEmptyContainer">
+                    <div class="goBackIcon">
+                        <a title="Go back" href="#" onclick="getAll(\''.goBackPath($path).'\');"><i class="fas fa-arrow-left" aria-hidden="true"></i></a>
+                    </div>';
         }
 
         #region fetchFolders
         // If no results were fetched, echo This folder is empty...
         if(empty($tree) && empty($notesTree)) {
             echo '
-            <div>
-                <i>This folder is empty...</i>
+                <div class="folderEmpty">
+                    <p>This folder is empty...</p>
+                </div>
             </div>
             ';
             exit();

@@ -196,12 +196,11 @@ a {
     background: var(--dp24);
 }
 .folderBar {
-    flex-grow: 1;
-    flex-basis: auto;
     min-width: 200px;
-    max-width: 25%;
+    width: 30%;
     background: var(--dp1);
     overflow-x: hidden;
+    overflow: scroll;
     transition: 0.2s;
 }
 .documentBox {
@@ -220,6 +219,20 @@ a {
 }
 .documentBox:focus {
     background: var(--dp2);
+}
+/* Empty folder */
+.folderEmptyContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    align-items: center;
+}
+.goBackIcon {
+    font-size: 30px;
+}
+.folderEmpty {
+    font-size: 30px;
+
 }
 /* Folder/FileDetails */
 /* Folder visibility toggle */
@@ -375,6 +388,7 @@ a {
 .formatBtnDisc {
     transition: 0.2s;
     border-radius: 20px;
+    width: max-content;
     padding: 2px 5px; 
     background: var(--dp8);
     color: var(--textColor1);

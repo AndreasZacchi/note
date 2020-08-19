@@ -47,7 +47,7 @@
                     <button class="formatBtn" id=""><i class="fas fa-share"></i></button>
                     <div class="formatBtnDisc">Redo</div>
                 </div>
-                <div class="formatBtnContainer">
+                <!-- <div class="formatBtnContainer">
                     <button class="formatBtn" id=""><i class="far fa-copy"></i></button>
                     <div class="formatBtnDisc">Copy</div>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="formatBtnContainer">
                     <button class="formatBtn" id=""><i class="far fa-clipboard"></i></button>
                     <div class="formatBtnDisc">Paste</div>
-                </div>
+                </div> -->
                 <div class="formatBtnDiv"></div>
             </div>
             <div class="formatBtnGroup">
@@ -140,6 +140,13 @@
                 <div class="formatBtnContainer">
                     <button class="formatBtn" id=""><i class="fas fa-list-ol"></i></button>
                     <div class="formatBtnDisc">Ordered list</div>
+                </div>
+                <div class="formatBtnDiv"></div>
+            </div>
+            <div class="formatBtnGroup">
+                <div class="formatBtnContainer">
+                    <button class="formatBtn id="><i class="fas fa-file-image"></i></button>
+                    <div class="formatBtnDisc">Import image</div>
                 </div>
             </div>
         </div>
