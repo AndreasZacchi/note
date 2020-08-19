@@ -29,7 +29,7 @@
     --textColor1: rgba(255, 255, 255, 0.87);
     --textColor2: rgba(255, 255, 255, 0.60);
     --textColor3: rgba(255, 255, 255, 0.38);
-    --flatRed: #c47066;
+    --flatRed: #CC5751;
     --flatGreen: #ACEA91;
     --spiceColor: #DB8667;
 }
@@ -199,13 +199,13 @@ a {
     flex-grow: 1;
     flex-basis: auto;
     min-width: 200px;
-    max-width: 25vw;
+    max-width: 25%;
     background: var(--dp1);
     overflow-x: hidden;
     transition: 0.2s;
 }
 .documentBox {
-    height: 20vh;
+    min-height: 175px;
     transition: 0.2s;
     cursor: pointer;
     border-bottom: 2px solid var(--dp0);
@@ -224,7 +224,7 @@ a {
 /* Folder/FileDetails */
 /* Folder visibility toggle */
 .folderToggle {
-    display: none;
+    display: none !important;
 }
 .iconToggle {
     transform: rotate(180deg);
@@ -272,7 +272,7 @@ a {
     transform: scale(0, 0);
     position: absolute;
     opacity: 0;
-    font-size: 3.5vw;
+    font-size: 50px;
     z-index: 1;
 }
 .documentDetails:focus {
@@ -434,6 +434,12 @@ a {
     color: var(--textColor1);
     background: var(--dp16);
     border-radius: 5px;
+}
+.footerHolder {
+    display: inline-block;
+}
+.footerInfo {
+    width: max-content;
 }
 /* Navbar */
 .logoutNoteButton {

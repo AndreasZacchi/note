@@ -19,7 +19,13 @@
         bleu.classList.toggle("folderToggle");
         let bleubleu = document.getElementById("iconToggle");
         bleubleu.classList.toggle("iconToggle");
-}
+    }
+    function navbarToggle() {
+        let blue = document.getElementById("navbarToggleId");
+        blue.classList.toggle("folderToggle");
+        let blueblue = document.getElementById("iconToggleTwo");
+        blueblue.classList.toggle("iconToggle")
+    }
 </script>
 <div class="grid-container">
     <div id="folderToggleId" class="folderBar">
@@ -139,10 +145,16 @@
         </div>
         <div id="noteContent" contenteditable="false"></div>
         <div id="noteFooter">
-        <button title="Toggle folder visibility" class="footerBtn" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-left"></i></button>
+            <div class="footerHolder">
+                <button title="Toggle folder visibility" class="footerBtn" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-left"></i></button>
+            </div>
+            <div class="footerHolder footerInfo"></div>
+            <div style="float: right;" class="footerHolder">
+                <button title="Toggle navigation bar visibility" class="footerBtn" onclick="navbarToggle()"><i id="iconToggleTwo" class="fas fa-angle-double-right"></i></button>
+            </div>
         </div>
     </div> 
-    <div class="noteNavbar">
+    <div id="navbarToggleId" class="noteNavbar">
         <div id="newContainer" class="noteNavbarContent"></div>
         <div id="newContainer1" class="noteNavbarContent"></div>
         <div class="noteNavbarContent"><a title="Steam Group" href="https://steamcommunity.com/groups/watdoink" target="_blank"><i class="fab fa-steam-symbol buttonNote"></i></a></div>
