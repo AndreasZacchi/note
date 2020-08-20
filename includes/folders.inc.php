@@ -120,10 +120,10 @@ function listFromTree() {
         // If no results were fetched, echo This folder is empty...
         if(empty($tree) && empty($notesTree)) {
             echo '
+                <div class="addNote">add note button on line 126 in folders.inc ples</div>
                 <div class="folderEmpty">
                     <p>This folder is empty...</p>
                 </div>
-                <div class="addNote">add note button on line 126 in folders.inc ples</div>
             </div>
             ';
             exit();
