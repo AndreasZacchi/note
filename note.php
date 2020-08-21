@@ -5,9 +5,14 @@
         exit();
     }
 ?>
+<script src="jquery-2.1.4.js"></script>
 <script src="includes/folders.js"></script>
 <script src="includes/notes.js"></script>
-
+<script>
+    $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
 <script>
     $(document).ready(function () {
         getAll(path);
@@ -27,6 +32,9 @@
         blueblue.classList.toggle("iconToggle")
     }
 </script>
+<div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
 <div class="grid-container">
     <div id="folderToggleId" class="folderBar">
         <div class="navHeader">
@@ -155,7 +163,13 @@
             <div class="footerHolder">
                 <button title="Toggle folder visibility" class="footerBtn" onclick="folderbarToggle()"><i id="iconToggle" class="fas fa-angle-double-left"></i></button>
             </div>
-            <div class="footerHolder footerInfo"></div>
+            <div class="footerHolder footerInfo">
+                <div>Words: x</div>
+                <div class="lo">
+                    <p>Last saved</p>
+                    <i class="fas fa-sync-alt loading"></i>
+                </div>
+            </div>
             <div style="float: right;" class="footerHolder">
                 <button title="Toggle navigation bar visibility" class="footerBtn" onclick="navbarToggle()"><i id="iconToggleTwo" class="fas fa-angle-double-right"></i></button>
             </div>
