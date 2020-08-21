@@ -204,7 +204,6 @@ a {
     background: var(--dp1);
     overflow: auto;
     overflow-x: hidden;
-    overflow-y: scroll;
     transition: 0.2s;
 }
 .documentBox {
