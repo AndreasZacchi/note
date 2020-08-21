@@ -172,13 +172,7 @@ a {
 .grid-container {
     display: flex;
     height: 100vh;
-<<<<<<< HEAD
-<<<<<<< HEAD
     width: 100vw;
-=======
->>>>>>> parent of 7f0ed5d... Loader plus small fix
-=======
->>>>>>> parent of 7f0ed5d... Loader plus small fix
     /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
 /* NoteFolderBar */
@@ -210,14 +204,7 @@ a {
     background: var(--dp1);
     overflow: auto;
     overflow-x: hidden;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    overflow: scroll;
->>>>>>> parent of 7f0ed5d... Loader plus small fix
-=======
-    overflow: scroll;
->>>>>>> parent of 7f0ed5d... Loader plus small fix
+    overflow-y: scroll;
     transition: 0.2s;
 }
 .documentBox {
@@ -446,7 +433,7 @@ a {
     background: var(--dp16);
     border-radius: 5px;
 }
-<<<<<<< HEAD
+
 =======
 .btnToggle {
     color: var(--textColor1);
@@ -459,7 +446,6 @@ a {
 .footerInfo {
     width: max-content;
 }
->>>>>>> parent of 7f0ed5d... Loader plus small fix
 /* Navbar */
 .logoutNoteButton {
     background: transparent;
