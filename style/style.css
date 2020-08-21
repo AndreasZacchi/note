@@ -29,10 +29,9 @@
     --textColor1: rgba(255, 255, 255, 0.87);
     --textColor2: rgba(255, 255, 255, 0.60);
     --textColor3: rgba(255, 255, 255, 0.38);
-    --flatRed: #FF4B3E;
-    --flatGreen: #67CE6F;
+    --flatRed: #c47066;
+    --flatGreen: #ACEA91;
     --spiceColor: #DB8667;
-    --purple: #391E3A
 }
 body {
     margin: 0;
@@ -173,41 +172,9 @@ a {
 .grid-container {
     display: flex;
     height: 100vh;
+    width: 100vw;
     /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
-/* Loading icon */
-.loader-wrapper {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--dp0);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    overflow: hidden;
-}
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-    overflow: hidden;
-}
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 /* NoteFolderBar */
 /* Search input */
 .searchContainer {
@@ -230,16 +197,17 @@ a {
     background: var(--dp24);
 }
 .folderBar {
+    flex-grow: 1;
+    flex-basis: auto;
     min-width: 200px;
-    width: 30%;
+    max-width: 25vw;
     background: var(--dp1);
+    overflow: auto;
     overflow-x: hidden;
-    overflow-y: scroll;
     transition: 0.2s;
 }
 .documentBox {
-    width: 100%;
-    min-height: 175px;
+    height: 20vh;
     transition: 0.2s;
     cursor: pointer;
     border-bottom: 2px solid var(--dp0);
@@ -255,37 +223,10 @@ a {
 .documentBox:focus {
     background: var(--dp2);
 }
-/* Empty folder */
-.folderEmptyContainer {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-.goBackIcon {
-    font-size: 30px;
-}
-.folderEmpty {
-    font-size: 30px;
-
-}
-.addNote {
-    width: 170px;
-    height: 60px;
-    background: var(--dp8);
-    color: var(--textColor1);
-    border-radius: 10px;
-    border: 1px solid var(--dp0);
-    cursor: pointer;
-}
-.addNote:hover {
-    color: var(--textColor1);
-    background: var(--dp12);
-}
 /* Folder/FileDetails */
 /* Folder visibility toggle */
 .folderToggle {
-    display: none !important;
+    display: none;
 }
 .iconToggle {
     transform: rotate(180deg);
@@ -333,10 +274,8 @@ a {
     transform: scale(0, 0);
     position: absolute;
     opacity: 0;
-    font-size: 50px;
+    font-size: 3.5vw;
     z-index: 1;
-    border-radius: 5px;
-    border-collapse: separate;
 }
 .documentDetails:focus {
     visibility: visible;
@@ -350,7 +289,7 @@ a {
 }
 .openDiv {
     grid-column: 1 / 3;
-    background: var(--purple);
+    background: var(--flatGreen);
 }
 .editDiv {
     background: var(--spiceColor);
@@ -436,10 +375,8 @@ a {
     transition: 0.2s;
 }
 .formatBtnDisc {
-    z-index: 9999;
     transition: 0.2s;
     border-radius: 20px;
-    width: max-content;
     padding: 2px 5px; 
     background: var(--dp8);
     color: var(--textColor1);
@@ -479,8 +416,6 @@ a {
 /* notefooter */
 #noteFooter {
     background: var(--dp6);
-    display: flex;
-    justify-content: space-between;
     height: 40px;
     width: 100%;
 }
@@ -497,36 +432,6 @@ a {
     background: var(--dp16);
     border-radius: 5px;
 }
-.btnToggle {
-    color: var(--textColor1);
-    background: var(--dp16);
-    border-radius: 5px;
-}
-.footerHolder {
-    display: inline-block;
-}
-.footerInfo {
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    flex: auto;
-    font-size: 24px;
-    color: var(--textColor2);
-    cursor: default;
-}
-.lo p, .lo i {
-    display: inline-block;
-}
-.loading {
-    animation: loadingAnimation 1200ms linear infinite;
-    font-size: 18px;
-}
-@keyframes loadingAnimation {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}   
-}
 /* Navbar */
 .logoutNoteButton {
     background: transparent;
@@ -534,6 +439,7 @@ a {
 }
 .noteNavbar {
     background: var(--dp1);
+    width: 75px;
     display: flex;
     flex-direction: column;
     justify-items: stretch;
@@ -541,12 +447,11 @@ a {
 }
 .noteNavbarContent {
     text-align: center;
-    width: 70px;
 }
 #buttonNote {
     color: var(--textColor1);
     cursor: pointer;
-    font-size: 38px;
+    font-size: 40px;
     transition: 0.2s;
 }
 .fa-sign-out-alt:hover {
@@ -555,7 +460,7 @@ a {
 .buttonNote {
     color: var(--textColor1);
     cursor: pointer;
-    font-size: 38px;
+    font-size: 40px;
     transition: 0.2s;
     float: none !important;
 }
