@@ -173,7 +173,10 @@ a {
     display: flex;
     height: 100vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 100vw;
+=======
+>>>>>>> parent of 7f0ed5d... Loader plus small fix
 =======
 >>>>>>> parent of 7f0ed5d... Loader plus small fix
     /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
@@ -208,6 +211,10 @@ a {
     overflow: auto;
     overflow-x: hidden;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    overflow: scroll;
+>>>>>>> parent of 7f0ed5d... Loader plus small fix
 =======
     overflow: scroll;
 >>>>>>> parent of 7f0ed5d... Loader plus small fix
