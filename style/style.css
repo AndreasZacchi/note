@@ -29,8 +29,8 @@
     --textColor1: rgba(255, 255, 255, 0.87);
     --textColor2: rgba(255, 255, 255, 0.60);
     --textColor3: rgba(255, 255, 255, 0.38);
-    --flatRed: #c47066;
-    --flatGreen: #ACEA91;
+    --flatRed: #A59AD6;
+    --flatGreen: #33402D;
     --spiceColor: #DB8667;
 }
 body {
@@ -266,7 +266,7 @@ a {
 }
 .documentBox {
     width: 100%;
-    min-height: 170px;
+    min-height: 200px;
     transition: 0.2s;
     cursor: pointer;
     border-bottom: 2px solid var(--dp0);
