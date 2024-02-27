@@ -16,627 +16,671 @@
     --spiceColor: #FF7F50;
 } */
 :root {
-    --dp0: #121212;
-    --dp1: rgba(255, 255, 255, 0.05);
-    --dp2: rgba(255, 255, 255, 0.07);
-    --dp3: rgba(255, 255, 255, 0.08);
-    --dp4: rgba(255, 255, 255, 0.09);
-    --dp6: rgba(255, 255, 255, 0.11);
-    --dp8: rgba(255, 255, 255, 0.12);
-    --dp12: rgba(255, 255, 255, 0.14);
-    --dp16: rgba(255, 255, 255, 0.15);
-    --dp24: rgba(255, 255, 255, 0.16);
-    --textColor1: rgba(255, 255, 255, 0.87);
-    --textColor2: rgba(255, 255, 255, 0.60);
-    --textColor3: rgba(255, 255, 255, 0.38);
-    --flatRed: #A59AD6;
-    --flatGreen: #33402D;
-    --spiceColor: #DB8667;
+  --dp0: #121212;
+  --dp1: rgba(255, 255, 255, 0.05);
+  --dp2: rgba(255, 255, 255, 0.07);
+  --dp3: rgba(255, 255, 255, 0.08);
+  --dp4: rgba(255, 255, 255, 0.09);
+  --dp6: rgba(255, 255, 255, 0.11);
+  --dp8: rgba(255, 255, 255, 0.12);
+  --dp12: rgba(255, 255, 255, 0.14);
+  --dp16: rgba(255, 255, 255, 0.15);
+  --dp24: rgba(255, 255, 255, 0.16);
+  --textColor1: rgba(255, 255, 255, 0.87);
+  --textColor2: rgba(255, 255, 255, 0.6);
+  --textColor3: rgba(255, 255, 255, 0.38);
+  --flatRed: #a59ad6;
+  --flatGreen: #33402d;
+  --spiceColor: #db8667;
 }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: source sans pro;
-    background-color: var(--dp0);
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: source sans pro;
+  background-color: var(--dp0);
+  color: white;
 }
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 /*Typewriter*/
-#typeWrittenHeader, #aboutUsTitle, #homeTitle, #functionsTitle, #contactTitle, #newsletterTitle {
-    text-align: center;
-    z-index: 1;
+#typeWrittenHeader,
+#aboutUsTitle,
+#homeTitle,
+#functionsTitle,
+#contactTitle,
+#newsletterTitle {
+  text-align: center;
+  z-index: 1;
 }
 #titleContainer {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#typeWrittenHeader, .titleStyle {
-    position: relative;
-    margin: -100px auto 0px;
-    background: var(--dp1)
+#typeWrittenHeader,
+.titleStyle {
+  position: relative;
+  margin: -100px auto 0px;
+  background: var(--dp1);
 }
-#typeWrittenHeader .Typewriter__wrapper, #typeWrittenHeader .Typewriter__cursor, #blogTitle .Typewriter__cursor, #blogTitle .Typewriter__wrapper {
-    font-size: 120px;
+#typeWrittenHeader .Typewriter__wrapper,
+#typeWrittenHeader .Typewriter__cursor,
+#blogTitle .Typewriter__cursor,
+#blogTitle .Typewriter__wrapper {
+  font-size: 120px;
 }
-#aboutUsTitle .Typewriter__wrapper, #aboutUsTitle .Typewriter__cursor, #homeTitle .Typewriter__wrapper, #homeTitle .Typewriter__cursor, #functionsTitle .Typewriter__wrapper, #functionsTitle .Typewriter__cursor, #contactTitle .Typewriter__wrapper, #contactTitle .Typewriter__cursor, #newsletterTitle .Typewriter__wrapper, #newsletterTitle .Typewriter__cursor {
-    font-size: 100px;
+#aboutUsTitle .Typewriter__wrapper,
+#aboutUsTitle .Typewriter__cursor,
+#homeTitle .Typewriter__wrapper,
+#homeTitle .Typewriter__cursor,
+#functionsTitle .Typewriter__wrapper,
+#functionsTitle .Typewriter__cursor,
+#contactTitle .Typewriter__wrapper,
+#contactTitle .Typewriter__cursor,
+#newsletterTitle .Typewriter__wrapper,
+#newsletterTitle .Typewriter__cursor {
+  font-size: 100px;
 }
 /*Typewriter-END*/
 /*Login*/
 .loginDivContainer {
-    display: grid;
-    place-items: center;
-    height: 100vh;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 .errormessage {
-    color: var(--flatRed);
+  color: var(--flatRed);
 }
 .successmessage {
-    color: var(--flatGreen);
+  color: var(--flatGreen);
 }
 .loginDiv {
-    width: 50%;
+  width: 50%;
 }
-.loginDiv, .signupDiv, .resetPasswordDiv, .createPasswordDiv {
-    text-align: center;
-    font-family: source sans pro;
-    color: var(--textColor1);
+.loginDiv,
+.signupDiv,
+.resetPasswordDiv,
+.createPasswordDiv {
+  text-align: center;
+  font-family: source sans pro;
+  color: var(--textColor1);
 }
 
 .input {
-    padding: 8px;
-    display: block;
-    border: none;
-    border-bottom: 2px solid var(--textColor1);
-    background-color: var(--mainColor);
-    color: var(--textColor1);
-    width: 50%;
-    margin: 0 auto 5px;
-    transition: 0.5s;
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid var(--textColor1);
+  background-color: var(--mainColor);
+  color: var(--textColor1);
+  width: 50%;
+  margin: 0 auto 5px;
+  transition: 0.5s;
 }
 
-.input:focus{
-    outline: none;
-    border-bottom: 2px solid var(--spiceColor);
+.input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--spiceColor);
 }
 .btn {
-    border: 2px solid white;
-    background-color: var(--mainColor);
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s ease-out;
+  border: 2px solid white;
+  background-color: var(--mainColor);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
 }
-  
+
 .default {
-    color: white;
+  color: white;
 }
 
 .default:hover {
-    background: var(--spiceColor);
+  background: var(--spiceColor);
 }
 
 .loginlink {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin: 2px auto 0;
-    width: 18%;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 2px auto 0;
+  width: 18%;
 }
 /*LoginStuff-END*/
 /*BLOG*/
 .blogDiv {
-    width: 75vw;
-    margin: 100px auto;
-    padding: 20px;
-    padding: 0;
-    text-align: center;
-    background: var(--dp2);
+  width: 75vw;
+  margin: 100px auto;
+  padding: 20px;
+  padding: 0;
+  text-align: center;
+  background: var(--dp2);
 }
 .blogSubject {
-    color: var(--textColor1);
-    font-size: 70px;
-    font-weight: normal;
-    margin: 0;
+  color: var(--textColor1);
+  font-size: 70px;
+  font-weight: normal;
+  margin: 0;
 }
 .blogText {
-    color: var(--textColor2);
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    text-align: justify;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--textColor2);
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .blogDate {
-    color: var(--textColor1);
-    font-size: 25px;
-    font-weight: normal;
-    margin: 0;
-    font-style: italic;
+  color: var(--textColor1);
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0;
+  font-style: italic;
 }
 .writtenBy {
-    color: var(--textColor1);
-    font-size: 30px;
-    font-weight: normal;
-    margin: 0;
-    text-transform: capitalize;
+  color: var(--textColor1);
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: capitalize;
 }
 /* NoteGrid */
 .grid-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  /* grid-template-columns: minmax(200px, 25vw) 1fr minmax(60px, 5vw); */
 }
 /* Loading icon */
 .loader-wrapper {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--dp0);
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--dp0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: hidden;
 }
 .loader {
-    border: 16px solid var(--dp24);
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-    overflow: hidden;
+  border: 16px solid var(--dp24);
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  overflow: hidden;
 }
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* NoteFolderBar */
 /* Search input */
 .searchContainer {
-    width: 70%;
-    margin: 20px auto;
+  width: 70%;
+  margin: 20px auto;
 }
 .navSearchInput {
-    transition: 0.2s;
-    width: 100%;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    font-size: 24px;
-    text-align: center;
-    font-family: source sans pro;
-    background: var(--dp12);
-    color: var(--textColor1);
+  transition: 0.2s;
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+  font-family: source sans pro;
+  background: var(--dp12);
+  color: var(--textColor1);
 }
 .navSearchInput:focus {
-    background: var(--dp24);
+  background: var(--dp24);
 }
 .folderBar {
-    min-width: 200px;
-    width: 25%;
-    background: var(--dp1);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: 0.2s;
+  min-width: 200px;
+  width: 25%;
+  background: var(--dp1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.2s;
 }
 /* Empty folder */
 .folderEmptyContainer {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 .goBackIcon {
-    font-size: 30px;
+  font-size: 30px;
 }
 .folderEmpty {
-    font-size: 30px;
-
+  font-size: 30px;
 }
 .addNote {
-    width: 170px;
-    height: 60px;
-    background: var(--dp8);
-    color: var(--textColor1);
-    border-radius: 10px;
-    border: 1px solid var(--dp0);
-    cursor: pointer;
+  width: 170px;
+  height: 60px;
+  background: var(--dp8);
+  color: var(--textColor1);
+  border-radius: 10px;
+  border: 1px solid var(--dp0);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .addNote:hover {
-    color: var(--textColor1);
-    background: var(--dp12);
+  color: var(--textColor1);
+  background: var(--dp12);
 }
 .documentBox {
-    width: 100%;
-    min-height: 200px;
-    transition: 0.2s;
-    cursor: pointer;
-    border-bottom: 2px solid var(--dp0);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  min-height: 200px;
+  transition: 0.2s;
+  cursor: pointer;
+  border-bottom: 2px solid var(--dp0);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .documentBox:hover {
-    background: var(--dp2);
+  background: var(--dp2);
 }
 .documentBox:focus {
-    background: var(--dp2);
+  background: var(--dp2);
 }
 /* Folder/FileDetails */
 /* Folder visibility toggle */
 .folderToggle {
-    display: none !important;
+  display: none !important;
 }
 .iconToggle {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .documentTitle {
-    font-size: 30px;
-    color: var(--textColor1);
-    transition: 0.2s;
-    /* These are technically the same, but use both */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -ms-word-break: break-all;
-    word-break: break-word;
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    text-align: center;
+  font-size: 30px;
+  color: var(--textColor1);
+  transition: 0.2s;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-align: center;
 }
-.fa-folder, .fa-sticky-note {
-    font-size: 24px;
-    color: var(--textColor3);
-    margin: 10px;
+.fa-folder,
+.fa-sticky-note {
+  font-size: 24px;
+  color: var(--textColor3);
+  margin: 10px;
 }
 .documentDates {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    color: var(--textColor3);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  color: var(--textColor3);
 }
 .createDate {
-    text-align: center;
+  text-align: center;
 }
 .documentDetails {
-    visibility: hidden;
-    overflow: hidden;
-    background: #222222;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    transition: 0.4s;
-    transform: scale(0, 0);
-    position: absolute;
-    opacity: 0;
-    font-size: 50px;
-    z-index: 1;
+  visibility: hidden;
+  overflow: hidden;
+  background: #222222;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  transition: 0.4s;
+  transform: scale(0, 0);
+  position: absolute;
+  opacity: 0;
+  font-size: 50px;
+  z-index: 1;
 }
 .documentDetails:focus {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(0.9, 0.9);
+  visibility: visible;
+  opacity: 1;
+  transform: scale(0.9, 0.9);
 }
 .documentBox:focus > .documentDetails {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(0.9, 0.9);
+  visibility: visible;
+  opacity: 1;
+  transform: scale(0.9, 0.9);
 }
 .openDiv {
-    grid-column: 1 / 3;
-    background: var(--flatGreen);
+  grid-column: 1 / 3;
+  background: var(--flatGreen);
 }
 .editDiv {
-    background: var(--spiceColor);
+  background: var(--spiceColor);
 }
 .removeDiv {
-    background: var(--flatRed);
+  background: var(--flatRed);
 }
 .editDocument {
-    color: var(--textColor1);
-    width: 100%;
-    text-align: center;
-    opacity: 1;
-    transition: 0.2s;
-    cursor: pointer;
+  color: var(--textColor1);
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  transition: 0.2s;
+  cursor: pointer;
 }
-.editDocument:hover { 
-    color: white;
+.editDocument:hover {
+  color: white;
 }
 .folderBar::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 .folderBar::-webkit-scrollbar-track {
-    background: var(--dp1);
+  background: var(--dp1);
 }
 .folderBar::-webkit-scrollbar-thumb {
-    background: var(--dp6);
+  background: var(--dp6);
 }
 .folderBar::-webkit-scrollbar-thumb:hover {
-    background: var(--dp12);
+  background: var(--dp12);
 }
 
 /* Stuff DONT CHANGE */
 #currentPath {
-    visibility: hidden;
-    position: absolute;
+  visibility: hidden;
+  position: absolute;
 }
 /* Note */
 /* Note container flex */
 #noteContainer {
-    flex: auto;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    background: var(--secondColor);
-    overflow: hidden;
-    /* height: 100vh; */
+  flex: auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--secondColor);
+  overflow: hidden;
+  /* height: 100vh; */
 }
 /* Note formating */
 #noteTextFormat {
-    /* border-radius: 0 0 25px 25px; */
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background: var(--dp6);
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 10px 0;
+  /* border-radius: 0 0 25px 25px; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: var(--dp6);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 0;
 }
-.formatBtnGroup { 
-    display: inherit;
-    width: auto;
+.formatBtnGroup {
+  display: inherit;
+  width: auto;
 }
 .formatBtnDiv {
-    width: 2px;
-    height: 40px;
-    margin-top: 3px;
-    background: var(--dp24);
+  width: 2px;
+  height: 40px;
+  margin-top: 3px;
+  background: var(--dp24);
 }
 .formatBtnContainer {
-    position: relative;
-    margin: 0 5px;
+  position: relative;
+  margin: 0 5px;
 }
 .formatBtn {
-    margin: 3px;
-    height: 40px;
-    width: 40px;
-    border: none;
-    font-size: 25px;
-    color: var(--textColor1);
-    background: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.2s;
+  margin: 3px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  font-size: 25px;
+  color: var(--textColor1);
+  background: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
 }
 .formatBtnDisc {
-    transition: 0.2s;
-    border-radius: 20px;
-    width: max-content;
-    padding: 2px 5px; 
-    background: var(--dp8);
-    color: var(--textColor1);
-    position: absolute;
-    top: 60px;
-    visibility: hidden;
-    opacity: 0;
+  transition: 0.2s;
+  border-radius: 20px;
+  width: max-content;
+  padding: 2px 5px;
+  background: var(--dp8);
+  color: var(--textColor1);
+  position: absolute;
+  top: 60px;
+  visibility: hidden;
+  opacity: 0;
 }
 .formatBtn:hover + .formatBtnDisc {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 .formatBtn:hover {
-    background: var(--dp8);
+  background: var(--dp8);
 }
 .formatBtnActive {
-    background: var(--dp8);
+  background: var(--dp8);
 }
 .formatInput {
-    width: 75px;
-    height: 40px;
-    border: none;
-    margin: 4px 5px;
-    font-size: 25px;
-    font-family: source sans pro;
+  width: 75px;
+  height: 40px;
+  border: none;
+  margin: 4px 5px;
+  font-size: 25px;
+  font-family: source sans pro;
 }
 /* NoteContent */
 #noteContent {
-    flex: auto;
-    margin: 0 auto;
-    width: 90%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: var(--dp1);
-    color: var(--textColor1);
+  flex: auto;
+  margin: 0 auto;
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--dp1);
+  color: var(--textColor1);
 }
 /* notefooter */
 /* notefooter */
 #noteFooter {
-    background: var(--dp6);
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    width: 100%;
+  background: var(--dp6);
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
 }
 .footerBtn {
-    height: 40px;
-    font-size: 32px;
-    border: none;
-    color: var(--textColor3);
-    background: var(--dp6);
-    transition: 0.2s
+  height: 40px;
+  font-size: 32px;
+  border: none;
+  color: var(--textColor3);
+  background: var(--dp6);
+  transition: 0.2s;
 }
 .footerBtn:hover {
-    color: var(--textColor1);
-    background: var(--dp16);
-    border-radius: 5px;
+  color: var(--textColor1);
+  background: var(--dp16);
+  border-radius: 5px;
 }
 .btnToggle {
-    color: var(--textColor1);
-    background: var(--dp16);
-    border-radius: 5px;
+  color: var(--textColor1);
+  background: var(--dp16);
+  border-radius: 5px;
 }
 .footerHolder {
-    display: inline-block;
+  display: inline-block;
 }
 .footerInfo {
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    flex: auto;
-    font-size: 24px;
-    color: var(--textColor2);
-    cursor: default;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  flex: auto;
+  font-size: 24px;
+  color: var(--textColor2);
+  cursor: default;
 }
-.lo p, .lo i {
-    display: inline-block;
+.lo p,
+.lo i {
+  display: inline-block;
 }
 .loading {
-    animation: loadingAnimation 1200ms linear infinite;
-    font-size: 18px;
+  animation: loadingAnimation 1200ms linear infinite;
+  font-size: 18px;
 }
 @keyframes loadingAnimation {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}   
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /* Navbar */
 .logoutNoteButton {
-    background: transparent;
-    border: none !important;
+  background: transparent;
+  border: none !important;
 }
 .noteNavbar {
-    background: var(--dp1);
-    width: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-items: stretch;
-    justify-content: space-evenly;
+  background: var(--dp1);
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  justify-content: space-evenly;
 }
 .noteNavbarContent {
-    text-align: center;
+  text-align: center;
 }
 #buttonNote {
-    color: var(--textColor1);
-    cursor: pointer;
-    font-size: 40px;
-    transition: 0.2s;
+  color: var(--textColor1);
+  cursor: pointer;
+  font-size: 40px;
+  transition: 0.2s;
 }
 .fa-sign-out-alt:hover {
-    transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
 }
 .buttonNote {
-    color: var(--textColor1);
-    cursor: pointer;
-    font-size: 40px;
-    transition: 0.2s;
-    float: none !important;
+  color: var(--textColor1);
+  cursor: pointer;
+  font-size: 40px;
+  transition: 0.2s;
+  float: none !important;
 }
 .buttonNote:hover {
-    color: var(--lightBlue);
-    transform: scale(1.2, 1.2);
+  color: var(--lightBlue);
+  transform: scale(1.2, 1.2);
 }
 /* Removes irritating outline */
 :focus {
-    outline: none;
+  outline: none;
 }
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--accentColor);
+  background: var(--accentColor);
 }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #2d4652;
-  }
-  
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover { */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2d4652;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover { 
     background: #3f6373;
-  }
+  }*/
 /* Dropdown Button */
 .dropbtn {
-    color: var(--secondColor);
-    font-size: 25px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    /* background-color: #8a8a8a; */
-  }
-  
-  /* The search field */
-  #fontTypeInput {
-    box-sizing: border-box;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* The search field when it gets focus/clicked on */
-  #fontTypeInput:focus {outline: 3px solid #ddd;}
-  
-  /* The container <div> - needed to position the dropdown content */
-  .fontTypeDropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    border: 1px solid #ddd;
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+  color: var(--secondColor);
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  /* background-color: #8a8a8a; */
+}
+
+/* The search field */
+#fontTypeInput {
+  box-sizing: border-box;
+  background-image: url("searchicon.png");
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#fontTypeInput:focus {
+  outline: 3px solid #ddd;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.fontTypeDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}

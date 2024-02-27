@@ -115,12 +115,15 @@ function listFromTree() {
                         <a title="Go back" href="#" onclick="getAll(\''.goBackPath($path).'\');"><i class="fas fa-arrow-left" aria-hidden="true"></i></a>
                     </div>';
         }
-
         #region fetchFolders
         // If no results were fetched, echo This folder is empty...
         if(empty($tree) && empty($notesTree)) {
             echo '
-                <div class="addNote">add note button on line 126 in folders.inc ples</div>
+                <div class="addNote">
+                    <a title="New Note" href="#" onclick="newNote(\''.$_SESSION['path64'].'\');">
+                        <i class="fa fa-file-text buttonNote" aria-hidden="true"></i>
+                    </a>
+                </div>
                 <div class="folderEmpty">
                     <p>This folder is empty...</p>
                 </div>
